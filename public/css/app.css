@@ -4535,6 +4535,8 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid #F6921E;
+  background-color: #F6921E;
 }
 
 .navbar .container,
@@ -4577,9 +4579,10 @@ input[type=button].btn-block {
   padding-left: 0;
 }
 
-.navbar-nav .dropdown-menu {
+.navbar-nav .dropdown-menu { 
   position: static;
   float: none;
+  background-color: #F6921E; 
 }
 
 .navbar-text {
