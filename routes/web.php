@@ -22,3 +22,6 @@ Route::get('daftarakun', function(){
 Route::get('alamatpengiriman', function(){
     return view('alamatpengiriman');
 });
+Route::get('profilpelanggan', function(){
+    return view('profilpelanggan');
+});

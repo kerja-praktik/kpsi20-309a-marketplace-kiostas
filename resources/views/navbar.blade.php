@@ -22,9 +22,6 @@
     </button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
 <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="#"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
-    </li>
      <!-- Dropdown Caregory -->
     <li class="nav-item dropdown active">
                 <a href="#" class="nav-link dropdown-toggle" id = "navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-list-alt"></i> Kategori</a>
