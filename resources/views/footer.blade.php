@@ -11,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <body>
-<nav class="navbar navbar-expand-sm bg-orange navbar-light fixed-bottom">
+<nav class="navbar navbar-expand-sm bg-orange navbar-light navbar-fixed-bottom">
  <!-- Grid column -->
  <div class="col-md-4 mb-md-0 mb-4">
         <!-- Content -->

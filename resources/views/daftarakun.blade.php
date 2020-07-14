@@ -11,9 +11,11 @@
  @extends('navbar')
 <body>
 <!-- Content  -->
-<div class="container-fluid" style="margin-top:100px">
+<div class="container-fluid" style="margin-top:120px">
   <h1>Daftar Akun di KIOSTA</h1>
+    &nbsp;
   <p>Daftarkan akun Anda sebagai</p>
+    &nbsp;
 
 <!-- Radio Button -->
 <!-- Default inline 1-->
@@ -27,8 +29,8 @@
   <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
   <label class="custom-control-label" for="defaultInline2">Mitra  UMKM</label>
 </div>
-      <!-- footer -->
-@extends('footer')
-
 </body>
+<div class=" " style="margin-top:150px">
+<!-- footer -->
+@extends('footer')
 </html>
