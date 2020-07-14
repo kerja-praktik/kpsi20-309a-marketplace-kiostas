@@ -32,13 +32,13 @@
 		<label for="nomor telepon" class="col-sm-2 col-form-label">Nomor Telepon</label>
 		<div class="col-sm-5">
 			<input type="nomor telepon" class="form-control" id="nama" placeholder=" ">
-      <small id="label alamat" class="form-text text-muted">Contoh : 081234567890 </small>
+      <small id="nomor telepon" class="form-text text-muted">Contoh : 081234567890 </small>
 		</div>
 	</div>
   <div class="form-group row">
 		<label for="kota atau kecamatan" class="col-sm-2 col-form-label">Kota atau Kecamatan</label>
 		<div class="col-sm-5">
-			<input type="nomor telepon" class="form-control" id="nomor telepon" placeholder="Tulis nama alamat / kota / kecamatan tujuan pengiriman ">
+			<input type="kota atau kecamatan" class="form-control" id="kota atau kecamatan" placeholder="Tulis nama alamat / kota / kecamatan tujuan pengiriman ">
 		</div>
 	</div>
   <div class="form-group row">
