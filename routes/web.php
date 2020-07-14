@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('daftarakun', function(){
     return view('daftarakun');
 });
+Route::get('alamatpengiriman', function(){
+    return view('alamatpengiriman');
+});
