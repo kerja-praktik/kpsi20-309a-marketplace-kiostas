@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-orange navbar-light fixed-top">
   <!-- Brand/logo -->
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/">
 <img src="{{ asset('img/Kiosta.jpeg') }}" width="200px" heigth="200px" >	
 </a>
 <!-- Links header -->
@@ -22,9 +22,6 @@
     </button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
 <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="#"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
-    </li>
      <!-- Dropdown Caregory -->
     <li class="nav-item dropdown active">
                 <a href="#" class="nav-link dropdown-toggle" id = "navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-list-alt"></i> Kategori</a>
@@ -74,7 +71,7 @@
       <li class="nav-item dropdown active">
                 <a href="#" class="nav-link dropdown-toggle" id = "navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user"></i> Akun</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="#" class="dropdown-item">Login</a>
-                    <a href="#" class="dropdown-item">Daftar</a>
+                    <a href="/masuk" class="dropdown-item">Masuk</a>
+                    <a href="/daftar" class="dropdown-item">Daftar</a>
           </body>
           </html> 
