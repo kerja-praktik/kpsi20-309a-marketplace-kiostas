@@ -7,6 +7,7 @@ meta charset="utf-8">
 <style>
 .template{
   height:380px;
+  padding:20px;
 }
 </style>
     <!-- Scripts -->
