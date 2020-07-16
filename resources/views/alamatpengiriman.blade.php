@@ -15,6 +15,7 @@
 <body>
 <!-- Content  -->
 <div class="container-fluid" style="margin-top:120px">
+<div class="container-fluid" style="margin-left:15px">
   <h1>Tambah Alamat Pengiriman</h1>
   &nbsp;
 <form>
@@ -56,7 +57,8 @@
 		<textarea class="form-control" id="alamat" rows="3" placeholder="Isi dengan nama jalan, nomor rumah, nomor kompleks, nama gedung, lantai atau nomor unit "></textarea>
 	</div>
 	</div>
-	<div class="btn-block btn float-right">
+    &nbsp;
+	<div class="btn-block">
 	<button type="button" class="btn btn-primary col-md-1" >Edit</button> &nbsp;
     <button type="button" class="btn btn-success col-md-1" >Simpan</button>
     </div>
