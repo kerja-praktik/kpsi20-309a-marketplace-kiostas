@@ -7,7 +7,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <html>
 <head>
-<title>Home</title>
+<title>Beranda</title>
 <style>
 .page {
   width: 750px;
@@ -20,7 +20,7 @@
 <body>
 <div class="container-fluid" style="margin-top:120px">
 <div class="page">
-<h1 style="font-size:40px" >Home</h1>
+<h1 style="font-size:40px" >Beranda</h1>
 
 </div>
 </div>

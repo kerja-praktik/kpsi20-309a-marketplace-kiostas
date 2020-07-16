@@ -11,7 +11,7 @@
 <style>
 .login-page {
   width: 360px;
-  height: 403px;
+  height: 602px;
   padding: 0 0;
   margin: auto;
 }
@@ -39,7 +39,7 @@
 				</form>
 				<form class="form">
 			<div  data-validate = "Password is required">
-				<span class="label-input100">Password</span>
+				<span class="label-input100">Kata Sandi</span>
 				<br>
 					<input class="form-control mr-sm-1"  size="50px" type="password" placeholder="" required />
 					</div>

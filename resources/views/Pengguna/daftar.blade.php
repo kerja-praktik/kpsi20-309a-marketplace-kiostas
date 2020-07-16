@@ -11,7 +11,7 @@
 <style>
 .login-page {
   width: 750px;
-  height: 580px;
+  height: 620px;
   padding: 0 50;
   margin: auto;
 }
@@ -43,7 +43,7 @@
 <div class="container-fluid" style="margin-top:120px">
 <div class="login-page">
 <img src="{{ asset('img/daftar.png') }}"  style="display: block; margin: auto" width="100px" heigth="100px" >
-<h1 style="font-size:40px" >Daftar</h1>
+<h1 style="font-size:40px; margin-top:20px;" >Daftar</h1>
 	<form class="form-inline my-3 my-lg-0">
 		<div class ="main">
 			<span>Nama Lengkap</span>
@@ -69,7 +69,7 @@
 		</div>
         <div class ="main">
             <br>
-		    <span class="label-input100">Password</span>
+		    <span class="label-input100">Kata Sandi</span>
         </div>
         <div class ="sidebar">
             <br>
@@ -77,7 +77,7 @@
 		</div>
         <div class ="main">
             <br>
-		    <span class="label-input100">Ulangi Password</span>
+		    <span class="label-input100">Ulangi Kata Sandi</span>
         </div>
         <div class ="sidebar">
             <br>
@@ -88,7 +88,7 @@
 	<form >
 		<button class="btn btn-primary" type="submit">Daftar</button>
 	</form>
-      	<p class="message">Dengan melakukan registrasi, Anda menyetujui <a href="#">syarat dan ketentuan </a><b>KIOSTAS</b>.</p>
+      	<p class="message">Dengan melakukan registrasi, Anda menyetujui <a href="/syaratdanketentuan">Syarat dan Ketentuan </a><b>KIOSTAS</b>.</p>
 </div>
 </div>
 </body>
