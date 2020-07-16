@@ -25,3 +25,12 @@ Route::get('alamatpengiriman', function(){
 Route::get('profilpelanggan', function(){
     return view('profilpelanggan');
 });
+oute::get('daftarproduk', function(){
+    return view('daftarproduk');
+});
+Route::get('profilumkm', function(){
+    return view('profilumkm');
+});
+Route::get('informasitoko', function(){
+    return view('informasitoko');
+});
