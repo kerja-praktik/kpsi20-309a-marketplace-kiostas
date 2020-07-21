@@ -73,7 +73,7 @@
       <li class="nav-item dropdown active">
                 <a href="#" class="nav-link dropdown-toggle" id = "navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user"></i> Akun</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="#" class="dropdown-item">Login</a>
+                    <a href="#" class="dropdown-item">Masuk</a>
                     <a href="#" class="dropdown-item">Daftar</a>
           </body>
           </html> 
