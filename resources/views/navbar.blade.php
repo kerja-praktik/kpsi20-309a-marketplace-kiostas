@@ -15,7 +15,7 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-orange navbar-light fixed-top">
   <!-- Brand/logo -->
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/">
 <img src="{{ asset('img/Kiosta.jpeg') }}" width="200px" heigth="200px" >	
 </a>
 <!-- Links header -->
@@ -61,10 +61,10 @@
 <ul class="navbar-nav ml-auto">
     <ul class="navbar-nav">
     <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-landmark"></i> Toko </a>
+        <a class="/toko" href="#"><i class="fas fa-landmark"></i> Toko </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Bantuan </a>
+        <a class="/bantuan" href="#"><i class="fas fa-question-circle"></i> Bantuan </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><i class="fas fa-balance-scale"></i> Bandingkan</a>
@@ -76,7 +76,7 @@
       <li class="nav-item dropdown active">
                 <a href="#" class="nav-link dropdown-toggle" id = "navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user"></i> Akun</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="#" class="dropdown-item">Masuk</a>
-                    <a href="#" class="dropdown-item">Daftar</a>
+                    <a href="/masuk" class="dropdown-item">Masuk</a>
+                    <a href="/daftar" class="dropdown-item">Daftar</a>
           </body>
           </html> 
