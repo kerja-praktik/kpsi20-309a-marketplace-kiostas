@@ -61,10 +61,10 @@
 <ul class="navbar-nav ml-auto">
     <ul class="navbar-nav">
     <li class="nav-item active">
-        <a class="/toko" href="#"><i class="fas fa-landmark"></i> Toko </a>
+        <a class="nav-link" href="/toko"><i class="fas fa-landmark"></i> Toko </a>
       </li>
       <li class="nav-item active">
-        <a class="/bantuan" href="#"><i class="fas fa-question-circle"></i> Bantuan </a>
+        <a class="nav-link" href="/bantuan"><i class="fas fa-question-circle"></i> Bantuan </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><i class="fas fa-balance-scale"></i> Bandingkan</a>
