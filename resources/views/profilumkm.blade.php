@@ -18,6 +18,7 @@
 <body>
 <!-- Content  -->
 <div class="container-fluid" style="margin-top:120px">
+<div class="container-fluid" style="margin-left:15px">
   <h1>Edit Profil </h1>
   &nbsp;
 <form>
@@ -74,8 +75,8 @@
     </div>
     </div>
   </div>
-  <div>
-  <div class="btn-block btn float-right">
+  &nbsp;
+	<div class="btn-block ">
 	<button type="button" class="btn btn-primary col-md-1" >Edit</button> &nbsp;
     <button type="button" class="btn btn-success col-md-1" >Simpan</button>
     </div>

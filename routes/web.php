@@ -16,12 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('daftarakun', function(){
-    return view('daftarakun');
-});
-Route::get('alamatpengiriman', function(){
+Route::get('/alamatpengiriman', function(){
     return view('alamatpengiriman');
 });
-Route::get('profilpelanggan', function(){
+Route::get('/profilpelanggan', function(){
     return view('profilpelanggan');
+});
+oute::get('/daftarproduk', function(){
+    return view('daftarproduk');
+});
+Route::get('/profilumkm', function(){
+    return view('profilumkm');
+});
+Route::get('/informasitoko', function(){
+    return view('informasitoko');
 });

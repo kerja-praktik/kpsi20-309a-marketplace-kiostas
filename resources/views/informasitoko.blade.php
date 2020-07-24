@@ -31,7 +31,7 @@
     <div class="form-group row">
 		<label for="telepon" class="col-sm-1 col-form-label">Telepon</label>
 		<div class="col-sm-5">
-			<input type="kode" class="form-control" id="kode" placeholder=" ">
+			<input type="telepon" class="form-control" id="telepon" placeholder=" ">
 		</div>
 	</div>
   <div class="form-group row">
@@ -55,13 +55,13 @@
     <div class="form-group row">
 		<label for="motto/slogan" class="col-sm-1 col-form-label">Motto/Slogan </label>
 		<div class="col-sm-5">
-			<input type="tahun berdiri" class="form-control" id="tahun berdiri" placeholder=" ">
+			<input type="motto/slogan" class="form-control" id="motto/slogan" placeholder=" ">
 		</div>
 	</div>
     <div class="form-group row">
-		<label for="motto/slogan" class="col-sm-1 col-form-label">Kategori produk</label>
+		<label for="kategori" class="col-sm-1 col-form-label">Kategori produk</label>
 		<div class="col-sm-5">
-			<input type="tahun berdiri" class="form-control" id="tahun berdiri" placeholder=" ">
+			<input type="kategori" class="form-control" id="kategori" placeholder=" ">
 		</div>
 	</div>
             <div class="form-group row">

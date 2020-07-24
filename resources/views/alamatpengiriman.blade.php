@@ -45,6 +45,12 @@
 			<input type="kota atau kecamatan" class="form-control" id="kota atau kecamatan" placeholder="Tulis nama alamat / kota / kecamatan tujuan pengiriman ">
 		</div>
 	</div>
+    <div class="form-group row">
+		<label for="provinsi" class="col-sm-2 col-form-label">Provinsi</label>
+		<div class="col-sm-5">
+			<input type="Provinsi" class="form-control" id="Provinsi" placeholder=" ">
+		</div>
+	</div>
   <div class="form-group row">
 		<label for="kode pos" class="col-sm-2 col-form-label">Kode Pos</label>
 		<div class="col-sm-5">

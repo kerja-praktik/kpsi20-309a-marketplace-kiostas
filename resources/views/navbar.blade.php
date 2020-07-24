@@ -5,11 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Bootstrap core CSS -->
+    <!-- Scripts -->
+     <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-orange navbar-light fixed-top">
@@ -59,6 +60,9 @@
   <div id="navbarSupportedContent" class="collapse navbar-collapse">
 <ul class="navbar-nav ml-auto">
     <ul class="navbar-nav">
+    <li class="nav-item active">
+        <a class="nav-link" href="#"><i class="fas fa-landmark"></i> Toko </a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Bantuan </a>
       </li>
@@ -72,7 +76,7 @@
       <li class="nav-item dropdown active">
                 <a href="#" class="nav-link dropdown-toggle" id = "navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user"></i> Akun</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="#" class="dropdown-item">Login</a>
+                    <a href="#" class="dropdown-item">Masuk</a>
                     <a href="#" class="dropdown-item">Daftar</a>
           </body>
           </html> 

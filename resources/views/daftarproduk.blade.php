@@ -37,7 +37,7 @@
 		</div>
 	</div>
   <div class="form-group row">
-		<label for="katefgori" class="col-sm-2 col-form-label">Kategori</label>
+		<label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
 		<div class="col-sm-5">
       <select class="form-control" id="jk">
         <option>Sembako</option>
