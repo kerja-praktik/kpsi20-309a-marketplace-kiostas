@@ -19,7 +19,7 @@
 <!-- Content  -->
 <div class="container-fluid" style="margin-top:120px">
 <div class="container-fluid" style="margin-left:15px">
-  <h1>Edit Informasi Toko</h1>
+  <h1>Informasi Toko</h1>
   &nbsp;
 <form>
 	<div class="form-group row">
