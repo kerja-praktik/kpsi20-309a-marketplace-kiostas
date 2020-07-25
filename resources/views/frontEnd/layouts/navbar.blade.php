@@ -58,6 +58,9 @@
   <div id="navbarSupportedContent" class="collapse navbar-collapse">
 <ul class="navbar-nav ml-auto">
     <ul class="navbar-nav">
+    <li class="nav-item active">
+        <a class="nav-link" href="#"><i class="fas fa-landmark"></i> Toko </a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Bantuan </a>
       </li>
