@@ -19,12 +19,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('beranda');
 });
-Route::get('/masuk', function(){
-    return view('Pengguna/masuk');
-});
+Route::get('/masuk','MainController@index');
+Route::post('/masuk/checkmasuk', 'MainController@checkmasuk');
+Route::get('/masuk/successmasuk', 'MainController@successmasuk');
+Route::get('/masuk/keluar', 'MainController@keluar');
+
+// Route::get('/daftar', 'AuthController@getDaftar');
+// Route::post('/daftar', 'AuthController@postDaftar')->name('Daftar');
+// Route::get('/masuk', 'AuthController@getMasuk');
+// Route::post('/masuk', 'AuthController@postMasuk')->name('Masuk');
+
 Route::get('/daftar', function(){
     return view('Pengguna/daftar');
 });
+
 Route::get('/bantuan', function(){
     return view('frontEnd/Bantuan/bantuan');
 });

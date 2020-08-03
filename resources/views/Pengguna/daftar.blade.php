@@ -44,44 +44,46 @@
 <div class="login-page">
 <img src="{{ asset('img/daftar.png') }}"  style="display: block; margin: auto" width="100px" heigth="100px" >
 <h1 style="font-size:40px; margin-top:20px;" >Daftar</h1>
-	<form class="form-inline my-3 my-lg-0">
+
+	<form class="form-inline my-3 my-lg-0" method="POST" action="{{ route('Daftar') }}">
+        {{ csrf_field() }}
 		<div class ="main">
-			<span>Nama Lengkap</span>
+			<span for="name">Nama Lengkap</span>
         </div>
         <div class ="sidebar">
-            <input class="form-control" size="50px" type="text" placeholder="" required autofocus/>
+            <input id="inputName" name="name" class="form-control" size="50px" type="text" placeholder="" required autofocus/>
          </div>
         <div class ="main">
             <br>
-		    <span class="label-input100">Nomor Handphone</span>
+		    <span for="no_hp" class="label-input100">Nomor Handphone</span>
         </div>
         <div class ="sidebar">
             <br>
-		<input class="form-control" size="50px" type="text" placeholder=""  required/>
+		<input id="no_hp" name="no_hp" class="form-control" size="50px" type="text" placeholder=""  required/>
 		</div>
         <div class ="main">
             <br>
-		    <span class="label-input100">Email</span>
+		    <span for="inputEmail" class="label-input100">Email</span>
         </div>
         <div class ="sidebar">
             <br>
-		<input class="form-control mr-sm-1" size="50px" type="email" placeholder=""  required/>
+		<input id="inputEmail" name="email" class="form-control mr-sm-1" size="50px" type="email" placeholder=""  required/>
 		</div>
         <div class ="main">
             <br>
-		    <span class="label-input100">Kata Sandi</span>
+		    <span for="inputPassword" class="label-input100">Kata Sandi</label>
         </div>
         <div class ="sidebar">
             <br>
-		<input class="form-control mr-sm-1" size="50px" type="password" placeholder=""  required/>
+		<input id="inputPassword" name="password" class="form-control mr-sm-1" size="50px" type="password" placeholder=""  required/>
 		</div>
         <div class ="main">
             <br>
-		    <span class="label-input100">Ulangi Kata Sandi</span>
+		    <span for="inputPassword" class="label-input100">Ulangi Kata Sandi</span>
         </div>
         <div class ="sidebar">
             <br>
-		<input class="form-control mr-sm-1" size="50px" type="password" placeholder="" required/>
+		<input id="inputPassword" name="password_confirmation" class="form-control mr-sm-1" size="50px" type="password" placeholder="" required/>
 		</div>
 	</form>
     <br>
