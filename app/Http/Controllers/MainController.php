@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\User;
 use validator;
 use Auth;
 use Illuminate\Support\Facades\Hash;
+=======
+use validator;
+use Auth;
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
 
 class MainController extends Controller
 {
@@ -14,6 +19,7 @@ class MainController extends Controller
         return view ('pengguna.masuk');
     }
 
+<<<<<<< HEAD
     public function daftar(){
         return view ('pengguna.daftar');
     }
@@ -49,6 +55,8 @@ class MainController extends Controller
          ]);
      }
 
+=======
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
     function checkmasuk(Request $request){
         $this->validate($request, [
             'email'     => 'required|email',
@@ -71,7 +79,11 @@ class MainController extends Controller
     }
 
     function successmasuk(){
+<<<<<<< HEAD
         return view ('home');
+=======
+        return view ('beranda');
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
     }
 
     function keluar(){

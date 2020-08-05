@@ -45,19 +45,27 @@
 <img src="{{ asset('img/daftar.png') }}"  style="display: block; margin: auto" width="100px" heigth="100px" >
 <h1 style="font-size:40px; margin-top:20px;" >Daftar</h1>
 
+<<<<<<< HEAD
 	<form class="form-inline my-3 my-lg-0" method="POST" action="{{ url('/daftar/storedaftar') }}">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
+=======
+	<form class="form-inline my-3 my-lg-0" method="POST" action="{{ route('Daftar') }}">
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
         {{ csrf_field() }}
 		<div class ="main">
 			<span for="name">Nama Lengkap</span>
         </div>
         <div class ="sidebar">
+<<<<<<< HEAD
             <input id="name" name="name" class="form-control" size="50px" type="text" placeholder="" required autofocus/>
             @if ($errors->has('name'))
                 <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors->first('name') }}</strong>
                 </span>
             @endif
+=======
+            <input id="inputName" name="name" class="form-control" size="50px" type="text" placeholder="" required autofocus/>
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
          </div>
         <div class ="main">
             <br>
@@ -66,6 +74,7 @@
         <div class ="sidebar">
             <br>
 		<input id="no_hp" name="no_hp" class="form-control" size="50px" type="text" placeholder=""  required/>
+<<<<<<< HEAD
 		    @if ($errors->has('no_hp'))
                 <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors->first('no_hp') }}</strong>
@@ -108,6 +117,37 @@
         </div>
         
         <button class="btn btn-primary" type="submit" style="margin-top:20px">Daftar</button>
+=======
+		</div>
+        <div class ="main">
+            <br>
+		    <span for="inputEmail" class="label-input100">Email</span>
+        </div>
+        <div class ="sidebar">
+            <br>
+		<input id="inputEmail" name="email" class="form-control mr-sm-1" size="50px" type="email" placeholder=""  required/>
+		</div>
+        <div class ="main">
+            <br>
+		    <span for="inputPassword" class="label-input100">Kata Sandi</label>
+        </div>
+        <div class ="sidebar">
+            <br>
+		<input id="inputPassword" name="password" class="form-control mr-sm-1" size="50px" type="password" placeholder=""  required/>
+		</div>
+        <div class ="main">
+            <br>
+		    <span for="inputPassword" class="label-input100">Ulangi Kata Sandi</span>
+        </div>
+        <div class ="sidebar">
+            <br>
+		<input id="inputPassword" name="password_confirmation" class="form-control mr-sm-1" size="50px" type="password" placeholder="" required/>
+		</div>
+	</form>
+    <br>
+	<form >
+		<button class="btn btn-primary" type="submit">Daftar</button>
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
 	</form>
       	<p class="message">Dengan melakukan registrasi, Anda menyetujui <a href="/syaratdanketentuan">Syarat dan Ketentuan </a><b>KIOSTAS</b>.</p>
 </div>

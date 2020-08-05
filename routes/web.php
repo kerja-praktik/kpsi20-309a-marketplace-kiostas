@@ -19,17 +19,30 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('beranda');
 });
+<<<<<<< HEAD
 
 Route::get('/daftar','MainController@daftar')->name('daftar');
 Route::post('/daftar/storedaftar','MainController@storedaftar');
 
+=======
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
 Route::get('/masuk','MainController@index');
 Route::post('/masuk/checkmasuk', 'MainController@checkmasuk');
 Route::get('/masuk/successmasuk', 'MainController@successmasuk');
 Route::get('/masuk/keluar', 'MainController@keluar');
 
+<<<<<<< HEAD
 Route::get('/daftarproduk', function(){
     return view('frontEnd/daftarproduk');
+=======
+// Route::get('/daftar', 'AuthController@getDaftar');
+// Route::post('/daftar', 'AuthController@postDaftar')->name('Daftar');
+// Route::get('/masuk', 'AuthController@getMasuk');
+// Route::post('/masuk', 'AuthController@postMasuk')->name('Masuk');
+
+Route::get('/daftar', function(){
+    return view('Pengguna/daftar');
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
 });
 
 Route::get('/bantuan', function(){

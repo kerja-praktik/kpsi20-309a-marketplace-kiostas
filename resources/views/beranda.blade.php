@@ -31,6 +31,10 @@ else
 @endif -->
 <h1 style="font-size:40px" >Beranda</h1>
 
+<<<<<<< HEAD
+=======
+<a href="{{ url('/masuk/keluar') }}">Keluar</a>
+>>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
 
 </div>
 </div>
