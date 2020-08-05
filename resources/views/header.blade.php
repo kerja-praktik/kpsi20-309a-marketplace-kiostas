@@ -62,7 +62,7 @@
         <a class="nav-link" href="#"><i class="fas fa-landmark"></i> Toko </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Bantuan </a>
+        <a class="nav-link" href="/bantuan"><i class="fas fa-question-circle"></i> Bantuan </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><i class="fas fa-balance-scale"></i> Bandingkan</a>
@@ -74,7 +74,8 @@
       <li class="nav-item dropdown active">
                 <a href="#" class="nav-link dropdown-toggle" id = "navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user"></i> Akun</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="/masuk" class="dropdown-item">Masuk</a>
-                    <a href="/daftar" class="dropdown-item">Daftar</a>
+                    <a href="{{ url('/masuk/keluar') }}" class="dropdown-item">Keluar</a>
+                    <!-- <a href="/masuk" class="dropdown-item">Masuk</a> -->
+                    <!-- <a href="/daftar" class="dropdown-item">Daftar</a> -->
           </body>
           </html> 

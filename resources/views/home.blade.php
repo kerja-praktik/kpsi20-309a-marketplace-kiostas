@@ -1,5 +1,5 @@
 <!doctype html>
-@extends('navbar')
+@extends('header')
    <!-- Scripts -->
    <script src="{{ asset('js/app.js') }}" defer></script>
     
@@ -30,6 +30,7 @@ else
   <script>window.location = "/masuk/successmasuk";</script>
 @endif -->
 <h1 style="font-size:40px" >Beranda</h1>
+
 
 
 </div>

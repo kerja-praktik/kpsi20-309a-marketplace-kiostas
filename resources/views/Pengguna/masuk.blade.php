@@ -30,23 +30,43 @@
 <div class="container-fluid" style="margin-top:120px">
 <div class="login-page">
 <h1 style="font-size:40px" >Masuk</h1>
-				<form class="form">
-					<div  data-validate="Username is required">
-						<span class="label-input100">Email/Nomor Handphone</span>
-						<br>
-					<input class="form-control mr-sm-2"  size="50px" type="text" placeholder="" required autofocus/>
-					</div>
-				</form>
-				<form class="form">
-			<div  data-validate = "Password is required">
-				<span class="label-input100">Kata Sandi</span>
-				<br>
-					<input class="form-control mr-sm-1"  size="50px" type="password" placeholder="" required />
-					</div>
-					</form>
-					<form class="form-inline my-2 my-lg-0">
-						<button class="btn btn-primary" type="submit">Masuk</button>
-					</form>
+
+@if(isset(Auth::user()->email))
+	<script>window.location="/masuk/successmasuk";</script>
+@endif
+
+@if ($message = Session::get('error'))
+<div class="alert alert-danger alert-block">
+<button type="button" class="close" data-dismiss="alert">x</button>
+<strong>{{ $message }}</strong>
+</div>
+@endif
+
+@if(count($errors)>0)
+	<div class="alert alert-danger"> 
+		<ul>
+		@foreach($errors->all() as $error)
+			<li> {{ $error }} </li>
+		@endforeach
+		</ul>
+	</div>
+
+@endif
+				<form method="POST" action="{{ url('/masuk/checkmasuk') }}">
+				{{ csrf_field() }}
+				<div class="form-group">
+				<label>Email</label>
+				<input type="email" name="email" class="form-control" size="50px" type="email" required autofocus/>
+				</div>
+				
+				<div class="form-group">
+				<label>Kata Sandi</label>
+				<input type="password" name="password" class="form-control" size="50px" type="password" required autofocus/>
+				</div>
+
+				<div class="form-group">
+				<button type="submit" name="masuk" class="btn btn-primary" value="Masuk">Masuk</button>
+				</div>
       	<p class="message">Tidak punya akun? <a href="/daftar">Buat Akun.</a></p>
 		</form>
 		</div>

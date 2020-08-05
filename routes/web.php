@@ -19,12 +19,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('beranda');
 });
-Route::get('/masuk', function(){
-    return view('Pengguna/masuk');
+
+Route::get('/daftar','MainController@daftar')->name('daftar');
+Route::post('/daftar/storedaftar','MainController@storedaftar');
+
+Route::get('/masuk','MainController@index');
+Route::post('/masuk/checkmasuk', 'MainController@checkmasuk');
+Route::get('/masuk/successmasuk', 'MainController@successmasuk');
+Route::get('/masuk/keluar', 'MainController@keluar');
+
+Route::get('/daftarproduk', function(){
+    return view('frontEnd/daftarproduk');
 });
-Route::get('/daftar', function(){
-    return view('Pengguna/daftar');
-});
+
 Route::get('/bantuan', function(){
     return view('frontEnd/Bantuan/bantuan');
 });
@@ -40,3 +47,6 @@ Route::get('/pengiriman', function(){
 Route::get('/syaratdanketentuan', function(){
     return view('frontEnd/Bantuan/syaratdanketentuan');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
