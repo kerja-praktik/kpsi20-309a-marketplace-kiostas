@@ -1,40 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<body>
-<nav class="navbar navbar-expand-sm bg-orange navbar-light navbar-fixed-bottom">
- <!-- Grid column -->
- <div class="col-md-4 mb-md-0 mb-4">
-        <!-- Content -->
-        <h6 class="text-uppercase font-weight-bold">Tentang Kami </h6>
-        <p>Kami merupakan marketplace yang mengiklankan produk dan jasa bagi mitra UMKM</p>
-      </div>
-      <!-- Grid column -->
-      <div class="col-md-4 mx-auto mb-md-0 mb-4">
-        <h6 class="text-uppercase font-weight-bold">Hubungi Kami</h6>
-        <p>
-        <i class="fab fa-instagram fa-lg white-text mr-3"> </i>@kioskitasemua</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i>kioskitasemua.kiostas@gmail.com</p>
-        <p>
-        <i class="fab fa-facebook mr-3"></i>Kiostas kios kita semua</p>
-      </div>
-            <!-- Grid column -->
-      <div class="col-md-4 mx-auto mb-md-0 mb-4">
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">Kiostas@2020
-  </div>
-</footer>
-</footer> 
-  </body>
-</html>
-          
+<footer id="footer"><!--Footer-->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-13">
+                    <div class="companyinfo">
+                    <h2><span>KIOSTA-Kios Kita untuk Sahabat & Negeri</span></h2>
+                        <p>Sebuah marketplace tempat bertemunya para pemilik usaha, kios, pedagang, bisnis dsb dengan para pembeli dan pemangku kepentingan lainnya.</p>
+                    </div>
+                </div>
+                    <div class="col-sm-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-2 mx-auto mb-md-0 mb-2">
+                    <div class="single-widget">
+                        <h2>Layanan</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Status Pemesanan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 mx-auto mb-md-0 mb-2">
+                    <div class="single-widget">
+                        <h2>Kebijakan</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Syarat dan Ketentuan</a></li>
+                            <li><a href="#">Kebijakan Pengembalian</a></li>
+                            <li><a href="#">Sistem Pembayaran</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5 mx-auto mb-md-0 mb-5">
+                    <div class="single-widget">
+                        <h2>Hubungi Kami</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a><i class="fa fa-home"></i> Jl. Bunga Cemp. X, Padang Bulan Selayang II, Kec. Medan Selayang,&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Kota Medan, 
+                             &nbsp;Sumatera Utara 20154</a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i> @kioskitasemua</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> Kioskitasemua.kiostas@gmail.com</a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i> Kiostas kios kita semua</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-ns animated fadeInRight">
+                    <div class="single-widget">
+                    <h2>Info Terbaru</h2>
+                        <form action="#" class="searchform">
+                            <input type="text" placeholder="Alamat Email Anda" />
+                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                            <p>Dapatkan informasi terkini dari situs kami</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">© 2020 KIOSTA </p>
+                <p class="pull-right">Oleh: <span> &nbsp; <a target="_blank" href="#">PT.Hagatekno Mediata Indonesia</a></span></p>
+            </div>
+        </div>
+    </div>
+</footer><!--/Footer-->
