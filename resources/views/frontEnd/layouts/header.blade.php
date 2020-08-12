@@ -2,18 +2,18 @@
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="logo pull-left">
-                        <a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/Kiosta.png')}}" alt="Image" height="65" width="260"></a>
-                    </div>
-                    <div class="btn-group pull-right">
-                        <div class="btn-group">
-                        </div>
-                    </div>
+                <div class="shop-menu pull-left">
+                      <a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/Kiosta.png')}}" alt="Image" height="65" width="260"></a>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm">
                     <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav">
+                        <ul>
+                        <li> <form action="/" method ="GET" class="header_search_form clearfix">
+                            <div class= "search_box icon">
+                            <input type="text" placeholder="Cari Produk" name="cari" id="query" value="{{ request()->input('search') }}" required="required" class="header_search_input" />
+                            </div>
+                        </form>
+                        </li> 
                             <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Keranjang</a></li>
                             @if(Auth::check())
                                 <li><a href="{{url('/myaccount')}}"><i class="fa fa-user"></i> Akun</a></li>
@@ -46,12 +46,7 @@
 
                 <!-- Search -->
                 <div class="col-sm-3">
-                    <form action="/" method ="GET" class="header_search_form clearfix">
-                        <div class="search_box pull-right">
-                            <div class= "serach_box icon">
-                            <input type="text" placeholder="Cari Produk" name="cari" id="query" value="{{ request()->input('search') }}" required="required" class="header_search_input" />
-                        </div>
-                    </form>
+                    
                 </div>
             </div>
         </div>
