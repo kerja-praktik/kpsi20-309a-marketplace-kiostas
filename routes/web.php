@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,39 +10,55 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/* FrontEnd Location */
+Route::get('/','IndexController@index');
+Route::get('/admin_home','IndexController@admin_index');
+Route::get('/list-products','IndexController@shop');
+Route::get('/cat/{id}','IndexController@listByCat')->name('cats');
+Route::get('/product-detail/{id}','IndexController@detialpro');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/', function(){
-    return view('beranda');
-});
-<<<<<<< HEAD
-
-Route::get('/daftar','MainController@daftar')->name('daftar');
-Route::post('/daftar/storedaftar','MainController@storedaftar');
-
-=======
->>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
-Route::get('/masuk','MainController@index');
-Route::post('/masuk/checkmasuk', 'MainController@checkmasuk');
-Route::get('/masuk/successmasuk', 'MainController@successmasuk');
-Route::get('/masuk/keluar', 'MainController@keluar');
-
-<<<<<<< HEAD
-Route::get('/daftarproduk', function(){
-    return view('frontEnd/daftarproduk');
-=======
-// Route::get('/daftar', 'AuthController@getDaftar');
-// Route::post('/daftar', 'AuthController@postDaftar')->name('Daftar');
-// Route::get('/masuk', 'AuthController@getMasuk');
-// Route::post('/masuk', 'AuthController@postMasuk')->name('Masuk');
-
-Route::get('/daftar', function(){
-    return view('Pengguna/daftar');
->>>>>>> 3243b13aedbdde5529552884aeba48f7b2fd2901
+/*search*/
+Route::any ('/search', function(Request $request){
+    $search = $request->search;
+    $products=Products_model::where('p_name','LIKE','%'.$search.'%')->orWhere('p_code', 'LIKE', '%'.$search.'%')->get();
+    return view('frontEnd.index')->withDetails($products)->withQuery($search);
 });
 
+/*get Attribute*/
+Route::get('/get-product-attr','IndexController@getAttrs');
+///// Cart Area /////////
+Route::post('/addToCart','CartController@addToCart')->name('addToCart');
+Route::get('/viewcart','CartController@index');
+Route::get('/cart/deleteItem/{id}','CartController@deleteItem');
+Route::get('/cart/update-quantity/{id}/{quantity}','CartController@updateQuantity');
+
+/*Apply Coupon Code*/
+// Route::post('/apply-coupon','CouponController@applycoupon');
+
+/*Simple User Login*/
+Route::get('/login_page','UsersController@index');
+Route::get('/register_page','UsersController@register_index');
+Route::post('/register_user','UsersController@register');
+Route::post('/user_login','UsersController@login');
+Route::get('/logout','UsersController@logout');
+
+/*User Authentications*/
+Route::group(['middleware'=>'FrontLogin_middleware'],function (){
+    Route::get('/myaccount','UsersController@account');
+    Route::put('/update-profile/{id}','UsersController@updateprofile');
+    Route::put('/update-password/{id}','UsersController@updatepassword');
+
+    Route::get('/check-out','CheckOutController@index');
+    Route::post('/submit-checkout','CheckOutController@submitcheckout');
+    Route::get('/order-review','OrdersController@index');
+    Route::post('/submit-order','OrdersController@order');
+    Route::get('/cod','OrdersController@cod');
+    Route::get('/paypal','OrdersController@paypal');
+    Route::get('/bank-transfer','OrdersController@banktransfer');
+});
+///
+
+/*Bantuan */
 Route::get('/bantuan', function(){
     return view('frontEnd/Bantuan/bantuan');
 });
@@ -60,6 +74,36 @@ Route::get('/pengiriman', function(){
 Route::get('/syaratdanketentuan', function(){
     return view('frontEnd/Bantuan/syaratdanketentuan');
 });
-Auth::routes();
 
+
+
+
+/* Admin Location */
+Auth::routes(['register'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
+    Route::get('/', 'AdminController@index')->name('admin_home');
+    /// Setting Area
+    Route::get('/settings', 'AdminController@settings');
+    Route::get('/check-pwd','AdminController@chkPassword');
+    Route::post('/update-pwd','AdminController@updatAdminPwd');
+    /// Category Area
+    Route::resource('/category','CategoryController');
+    Route::get('delete-category/{id}','CategoryController@destroy');
+    Route::get('/check_category_name','CategoryController@checkCateName');
+    /// Products Area
+    Route::resource('/product','ProductsController');
+    Route::get('delete-product/{id}','ProductsController@destroy');
+    Route::get('delete-image/{id}','ProductsController@deleteImage');
+    /// Product Attribute
+    Route::resource('/product_attr','ProductAtrrController');
+    Route::get('delete-attribute/{id}','ProductAtrrController@deleteAttr');
+    /// Product Images Gallery
+    Route::resource('/image-gallery','ImagesController');
+    Route::get('delete-imageGallery/{id}','ImagesController@destroy');
+    /// ///////// Coupons Area //////////
+    Route::resource('/coupon','CouponController');
+    Route::get('delete-coupon/{id}','CouponController@destroy');
+///
+
+});
