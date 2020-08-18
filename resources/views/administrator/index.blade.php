@@ -3,10 +3,11 @@
 @section('content')
     <!--breadcrumbs-->
     <div id="content-header">
-    <div id="breadcrumb"> 
-    <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a></div>
+        <div id="breadcrumb"> <a href="/admin" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a></div>
     </div>
+    <!--End-breadcrumbs-->
 
+    <!--Action boxes-->
     <div class="container-fluid">
         <div class="quick-actions_homepage">
             <ul class="quick-actions">
@@ -24,7 +25,6 @@
             </ul>
         </div>
     </div>
-    
 @endsection
 @section('jsblock')
     <script src="{{asset('js/excanvas.min.js')}}"></script>
