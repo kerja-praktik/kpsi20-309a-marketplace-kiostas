@@ -14,12 +14,12 @@
 <div id="loginbox">
     <form id="loginform" class="form-vertical" method="POST" action="{{ route('login') }}">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
-        <div class="control-group normal_text"> <h3><img src="{{asset('img/logo.png')}}" alt="Logo" /></h3></div>
+        <div class="control-group normal_text"> <h3><img src="{{asset('frontEnd/images/home/Kiosta.png')}}" alt="image" height="65" width="260" /></h3></div>
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
                     <span class="add-on bg_lg"><i class="icon-user"> </i></span>
-                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                    <input id="email" type="email" placeholder="Email Admin" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                     @if ($errors->has('email'))
                         <br><span class="invalid-feedback" style="color: white;">
                             <strong>{{ $errors->first('email') }}</strong>
@@ -32,7 +32,7 @@
             <div class="controls">
                 <div class="main_input_box">
                     <span class="add-on bg_ly"><i class="icon-lock"></i></span>
-                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                    <input id="password" type="password"placeholder="Kata Sandi" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                     @if ($errors->has('password'))
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $errors->first('password') }}</strong>
@@ -42,8 +42,7 @@
             </div>
         </div>
         <div class="form-actions">
-            <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
-            <span class="pull-right"><button type="submit" class="btn btn-success">Login</button></span>
+            <span class="pull-right"><button type="submit" class="btn btn-success">Masuk</button></span>
         </div>
     </form>
     <form id="recoverform" action="#" class="form-vertical">
