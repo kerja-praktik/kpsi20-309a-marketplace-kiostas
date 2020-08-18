@@ -12,7 +12,7 @@ class AdminController extends Controller
     public function index(){
         $menu_active=1;
         $i=0;
-        return view('backEnd.index',compact('menu_active'));
+        return view('administrator.index',compact('menu_active'));
     }
 
     public function settings(){
