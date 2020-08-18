@@ -53,7 +53,6 @@ class CategoryController extends Controller
     {
         $this->validate($request,[
             'name'=>'required|max:255|unique:categories,name',
-            'url'=>'required',
         ]);
         $data=$request->all();
         Category_model::create($data);
@@ -98,7 +97,6 @@ class CategoryController extends Controller
         $update_categories=Category_model::findOrFail($id);
         $this->validate($request,[
             'name'=>'required|max:255|unique:categories,name,'.$update_categories->id,
-            'url'=>'required',
         ]);
         //dd($request->all());die();
         $input_data=$request->all();
@@ -119,6 +117,6 @@ class CategoryController extends Controller
     {
         $delete=Category_model::findOrFail($id);
         $delete->delete();
-        return redirect()->route('category.index')->with('message','Delete Success!');
+        return redirect()->route('category.index')->with('message','Berhasil Dihapus!');
     }
 }
