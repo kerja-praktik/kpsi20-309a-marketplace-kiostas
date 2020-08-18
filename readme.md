@@ -27,39 +27,18 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## KIOSTAS
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+KIOSTAS merupakan produk yang dibangun sebagai sebuah marketplace tempat bertemunya para pemilik usaha, kios, pedagang, bisnis yang dikategorikan dalam kelompok UMKM dengan para pembeli dan pemangku kepentingan lainnya. 
+Marketplace KIOSTAS akan  memfasilitasi proses jual beli berbagai produk mitra UMKM dengan menyediakan tempat bagi para penjual yang ingin berjualan dan membantu mereka untuk bertemu pembeli dan melakukan transaksi dengan lebih simpel dan mudah. 
+Jika si calon pembeli ingin membeli produk yang ditawarkan, mereka bisa melakukan transaksi pemesanan melalui marketplace itu sendiri. 
+Kemudian setelah menerima pembayaran, penjual akan mengirim barang ke pembeli.  
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Instalasi
+Pada bagian ini dijelaskan bagaimana melakukan instalasi KIOSTAS, yaitu : 
+1. Clone repository dengan mengetikkan command “git clone https://github.com/kerja-praktik/kpsi20-309a-marketplace-kiostas.git” pada terminal.
+2. Pada folder, buka command prompt dan jalankan “composer install”
+3. Buat database untuk KIOSTAS dan atur user management sesuai dengan file .env pada file KIOSTAS.
+4. Setelah mendefinisikan perubahan pada file .env, selanjutnya jalankan perintah “php artisan migrate” untuk melakukan migration
+5. jalankan (execute) query dari file DB file sql yaitu "kiostas_db.sql" pada tool administrasi untuk database MySQL.
+6. Jalankan command “php artisan serve” dan masukkan ke web browser masing-masing.
