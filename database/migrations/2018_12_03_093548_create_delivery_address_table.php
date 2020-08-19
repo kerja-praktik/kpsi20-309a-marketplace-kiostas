@@ -22,7 +22,7 @@ class CreateDeliveryAddressTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('country');
-            $table->string('pincode');
+            $table->string('postal_code');
             $table->string('mobile');
             $table->timestamps();
         });
