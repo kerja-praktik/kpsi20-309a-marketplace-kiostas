@@ -25,7 +25,7 @@ class CartController extends Controller
         Session::forget('discount_amount_price');
         Session::forget('coupon_code');
         if($inputToCart['size']==""){
-            return back()->with('message','Please select Size');
+            return back()->with('message','Silakan pilih varian terlebih dahulu');
         }else{
             $stockAvailable=DB::table('product_att')->select('stock','sku')->where(['products_id'=>$inputToCart['products_id'],
                 'price'=>$inputToCart['price']])->first();
