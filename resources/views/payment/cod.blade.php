@@ -4,9 +4,10 @@
 @section('content')
     <div class="container">
         <div id ="demoFontCOD">
-            <h3 class="text-center">PESANAN ANDA SUDAH DITERIMA</h3>
-            <p class="text-center">Thanks for your Order that use Options on Cash On Delivery</p>
-            <p class="text-center">We will contact you by Your Email (<b>{{$user_order->users_email}}</b>) or Your Phone Number (<b>{{$user_order->mobile}}</b>)</p>
+            <h3 class="text-center">PESANAN ANDA SEDANG KAMI PROSES</h3>
+            <p class="text-center">Terima Kasih Telah Memesan Dengan Metode Pembayaran Cash</p>
+            <p class="text-center">Kami akan menghubungi email anda (<b>{{$user_order->users_email}}</b>) atau nomor telepon anda (<b>{{$user_order->mobile}}</b>)</p>
+            <p class="text-center">Silahkan lihat <a href = "/bantuan">Bantuan </a> untuk informasi lebih lanjut</p>
         </div>
     </div>
     <div style="margin-bottom: 20px;"></div>
