@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cart_model;
 use App\Orders_model;
-use App\ListOrders_model;
+use App\Products_model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +17,7 @@ class OrdersController extends Controller
         $cart_datas=Cart_model::where('session_id',$session_id)->get();
         $total_price=0;
         foreach ($cart_datas as $cart_data){
-            $total_price+=$cart_data->price*$cart_data->quantity;
+            $total_price+=$cart_data->price*$cart_data->quantity+30000;
         }
         $shipping_address=DB::table('delivery_address')->where('users_id',Auth::id())->first();
         return view('checkout.review_order',compact('shipping_address','cart_datas','total_price'));
@@ -37,10 +37,6 @@ class OrdersController extends Controller
     public function cod(){
         $user_order=Orders_model::where('users_id',Auth::id())->first();
         return view('payment.cod',compact('user_order'));
-    }
-    public function paypal(Request $request){
-        $who_buying=Orders_model::where('users_id',Auth::id())->first();
-        return view('payment.paypal',compact('who_buying'));
     }
     public function banktransfer(){
         $user_order=Orders_model::where('users_id',Auth::id())->first();
