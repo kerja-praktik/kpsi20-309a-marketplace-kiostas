@@ -14,7 +14,7 @@
                 <div class="col-sm-4 col-sm-offset-1">
                     <div class="login-form"><!--login form-->
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
-                        <legend>Tagihan Pembayaran ke</legend>
+                        <legend>PENGIRIM</legend>
                         <div class="form-group {{$errors->has('billing_name')?'has-error':''}}">
                             <input type="text" class="form-control" name="billing_name" id="billing_name" value="{{$user_login->name}}" placeholder="Nama Pengirim">
                             <span class="text-danger">{{$errors->first('billing_name')}}</span>
@@ -27,9 +27,12 @@
                             <input type="text" class="form-control" name="billing_city" value="{{$user_login->city}}" id="billing_city" placeholder="Kota Pengirim">
                             <span class="text-danger">{{$errors->first('billing_city')}}</span>
                         </div>
-                        <div class="form-group {{$errors->has('billing_state')?'has-error':''}}">
-                            <input type="text" class="form-control" name="billing_state" value="{{$user_login->state}}" id="billing_state" placeholder="Provinsi Pengirim">
-                            <span class="text-danger">{{$errors->first('billing_state')}}</span>
+                        <div class="form-group">
+                            <select name="billing_province" id="billing_province" class="form-control">
+                                @foreach($provinces as $province)
+                                    <option value="{{$province->province_name}}" {{$user_login->province==$province->province_name?' selected':''}}>{{$province->province_name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
                             <select name="billing_country" id="billing_country" class="form-control">
@@ -53,7 +56,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="signup-form"><!--sign up form-->
-                        <legend>Dikirimkan ke</legend>
+                        <legend>PENERIMA</legend>
                         <div class="form-group {{$errors->has('shipping_name')?'has-error':''}}">
                             <input type="text" class="form-control" name="shipping_name" id="shipping_name" value="" placeholder="Nama Penerima">
                             <span class="text-danger">{{$errors->first('shipping_name')}}</span>
@@ -66,9 +69,12 @@
                             <input type="text" class="form-control" name="shipping_city" value="" id="shipping_city" placeholder="Kota Penerima">
                             <span class="text-danger">{{$errors->first('shipping_city')}}</span>
                         </div>
-                        <div class="form-group {{$errors->has('shipping_state')?'has-error':''}}">
-                            <input type="text" class="form-control" name="shipping_state" value="" id="shipping_state" placeholder="Provinsi Penerima ">
-                            <span class="text-danger">{{$errors->first('shipping_state')}}</span>
+                        <div class="form-group">
+                            <select name="shipping_province" id="shipping_province" class="form-control">
+                                @foreach($provinces as $province)
+                                    <option value="{{$province->province_name}}">{{$province->province_name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
                             <select name="shipping_country" id="shipping_country" class="form-control">
@@ -85,6 +91,7 @@
                             <input type="text" class="form-control" name="shipping_mobile" value="" id="shipping_mobile" placeholder="Nomor Telepon Penerima">
                             <span class="text-danger">{{$errors->first('shipping_mobile')}}</span>
                         </div>
+                        
                         <button type="submit" class="btn btn-primary" style="float: right;">Beli</button>
                     </div><!--/sign up form-->
                 </div>
