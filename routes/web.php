@@ -50,6 +50,7 @@ Route::group(['middleware'=>'FrontLogin_middleware'],function (){
     Route::get('/order-review','OrdersController@index');
     Route::post('/submit-order','OrdersController@order');
     Route::get('/cod','OrdersController@cod');
+    Route::get('/bank-transfer','OrdersController@banktransfer');
 });
 ///
 
