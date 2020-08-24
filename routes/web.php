@@ -50,7 +50,6 @@ Route::group(['middleware'=>'FrontLogin_middleware'],function (){
     Route::get('/order-review','OrdersController@index');
     Route::post('/submit-order','OrdersController@order');
     Route::get('/cod','OrdersController@cod');
-    Route::get('/paypal','OrdersController@paypal');
     Route::get('/bank-transfer','OrdersController@banktransfer');
 });
 ///
@@ -98,9 +97,6 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
     /// Product Images Gallery
     Route::resource('/image-gallery','ImagesController');
     Route::get('delete-imageGallery/{id}','ImagesController@destroy');
-    /// ///////// Coupons Area //////////
-    Route::resource('/coupon','CouponController');
-    Route::get('delete-coupon/{id}','CouponController@destroy');
 ///
 
 });
