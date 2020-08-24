@@ -32,9 +32,6 @@ Route::get('/viewcart','CartController@index');
 Route::get('/cart/deleteItem/{id}','CartController@deleteItem');
 Route::get('/cart/update-quantity/{id}/{quantity}','CartController@updateQuantity');
 
-/*Apply Coupon Code*/
-// Route::post('/apply-coupon','CouponController@applycoupon');
-
 /*Simple User Login*/
 Route::get('/login_page','UsersController@index');
 Route::get('/register_page','UsersController@register_index');
@@ -76,7 +73,7 @@ Route::get('/syaratdanketentuan', function(){
 });
 
 
-
+Route::get('/index', 'AdminController@administrator');
 
 /* Admin Location */
 Auth::routes(['register'=>false]);
