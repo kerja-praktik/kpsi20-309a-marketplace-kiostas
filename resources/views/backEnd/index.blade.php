@@ -3,28 +3,70 @@
 @section('content')
     <!--breadcrumbs-->
     <div id="content-header">
-        <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a></div>
+    <div id="breadcrumb"> 
+    <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Orders</a></div>
     </div>
-    <!--End-breadcrumbs-->
 
-    <!--Action boxes-->
     <div class="container-fluid">
-        <div class="quick-actions_homepage">
-            <ul class="quick-actions">
-                <li class="bg_lb"> <a href="index.html"> <i class="icon-dashboard"></i> <span class="label label-important">20</span> My Dashboard </a> </li>
-                <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Charts</a> </li>
-                <li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i><span class="label label-success">101</span> Widgets </a> </li>
-                <li class="bg_lo"> <a href="tables.html"> <i class="icon-th"></i> Tables</a> </li>
-                <li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Full width</a> </li>
-                <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
-                <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
-                <li class="bg_lb"> <a href="interface.html"> <i class="icon-pencil"></i>Elements</a> </li>
-                <li class="bg_lg"> <a href="calendar.html"> <i class="icon-calendar"></i> Calendar</a> </li>
-                <li class="bg_lr"> <a href="error404.html"> <i class="icon-info-sign"></i> Error</a> </li>
-
-            </ul>
+        @if(Session::has('message'))
+            <div class="alert alert-success text-center" role="alert">
+                <strong>Berhasil!</strong> {{Session::get('message')}}
+            </div>
+        @endif
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+                <h5>Daftar Pesanan</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-bordered data-table">
+                    <thead>
+                    <tr>
+                        <th>ID Pesanan</th>
+                        <th>ID Pemesan</th>
+                        <th>Email Pemesan </th>
+                        <th>Produk</th>
+                        <th>Nomor Pemesan</th>
+                        <th>Metode Pembayaran</th>
+                        <th>Total</th>
+                        <th>Tanggal Pemesanan</th>
+                        <th>Status Pemesanan</th>
+                        <th>Aksi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        
+                    @foreach($orders as $order)
+                        <?php $i++; ?>
+                        <tr class="gradeC">
+                            <td>{{$i}}</td>
+                            <td style="vertical-align: middle;">{{$order->users_id}}</td>
+                            <td style="vertical-align: middle;">{{$order->users_email}}</td>
+                            <td style="vertical-align: middle;">{{$order->products_name}}</td>
+                            <td style="vertical-align: middle;">{{$order->mobile}}</td>
+                            <td style="vertical-align: middle;">{{$order->payment_method}}</td>
+                            <td style="vertical-align: middle;">Rp {{number_format($order->grand_total, 0, ".", ".")}}</td>
+                            <td style="vertical-align: middle;">{{$order->created_at}}</td>
+                            <td style="vertical-align: middle;">{{$order->order_status}}</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <a href="#myModal{{$order->id}}" data-toggle="modal" class="btn btn-info btn-mini">View</a>
+                                <a href="#" class="btn btn-primary btn-mini">Edit</a>
+                                <a href="javascript:" rel="{{$order->id}}" rel1="cancel-order" class="btn btn-danger btn-mini deleteRecord">Cancel</a>
+                            </td>
+                        </tr>
+                        
+                    @endforeach
+                    {{--<ul class="pagination">
+                        <li class="active"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">&raquo;</a></li>
+                    </ul>--}}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+    
 @endsection
 @section('jsblock')
     <script src="{{asset('js/excanvas.min.js')}}"></script>
