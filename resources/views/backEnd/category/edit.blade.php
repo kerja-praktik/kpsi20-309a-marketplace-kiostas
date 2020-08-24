@@ -1,7 +1,7 @@
 @extends('backEnd.layouts.master')
-@section('title','Edit Category')
+@section('title','Edit Kategori')
 @section('content')
-    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="{{route('category.index')}}">Categories</a> <a href="#" class="current">Edit Category</a> </div>
+    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> <a href="{{route('category.index')}}">Kategori</a> <a href="#" class="current">Edit Category</a> </div>
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span12">
@@ -50,19 +50,7 @@
                                     <textarea name="description" id="description" rows="3">{{$edit_category->description}}</textarea>
                                 </div>
                             </div>
-                            <div class="control-group{{$errors->has('url')?' has-error':''}}">
-                                <label class="control-label">URL (Start with http://) :</label>
-                                <div class="controls">
-                                    <input type="text" name="url" id="url" value="{{$edit_category->url}}">
-                                    <span class="text-danger">{{$errors->first('url')}}</span>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Enable :</label>
-                                <div class="controls">
-                                    <input type="checkbox" name="status" id="status" value="1" {{($edit_category->status==0)?'':'checked'}}>
-                                </div>
-                            </div>
+                        
                             <div class="control-group">
                                 <label for="control-label"></label>
                                 <div class="controls">
