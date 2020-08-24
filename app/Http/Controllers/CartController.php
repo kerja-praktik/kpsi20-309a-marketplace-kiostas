@@ -22,10 +22,8 @@ class CartController extends Controller
 
     public function addToCart(Request $request){
         $inputToCart=$request->all();
-        Session::forget('discount_amount_price');
-        Session::forget('coupon_code');
         if($inputToCart['size']==""){
-            return back()->with('message','Silakan pilih varian terlebih dahulu');
+            return back()->with('message','Tolong Pilih Varian Produk');
         }else{
             $stockAvailable=DB::table('product_att')->select('stock','sku')->where(['products_id'=>$inputToCart['products_id'],
                 'price'=>$inputToCart['price']])->first();
@@ -56,14 +54,10 @@ class CartController extends Controller
     }
     public function deleteItem($id=null){
         $delete_item=Cart_model::findOrFail($id);
-        Session::forget('discount_amount_price');
-        Session::forget('coupon_code');
         $delete_item->delete();
         return back()->with('message','Berhasil dihapus!');
     }
     public function updateQuantity($id,$quantity){
-        Session::forget('discount_amount_price');
-        Session::forget('coupon_code');
         $sku_size=DB::table('cart')->select('product_code','size','quantity')->where('id',$id)->first();
         $stockAvailable=DB::table('product_att')->select('stock')->where(['sku'=>$sku_size->product_code,
             'size'=>$sku_size->size])->first();
