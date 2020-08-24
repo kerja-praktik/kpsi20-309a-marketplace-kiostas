@@ -4,11 +4,10 @@
 @section('content')
     <div class="container">
         <div id ="demoFontCOD">
-        <h1 class="text-center">PESANAN ANDA SUDAH DITERIMA</h3>
-        <p class="text-center">Thanks for your Order that use Options on Bank Transafer</p>
-        <p class="text-center">Please make a payment to your Virtual Number : 
-        <span class ="text-danger"> <b>0868 {{$user_order->phone_number}}</b> </span></p>
-        <p class="text-center">Go to <a href = "/bantuan">Bantuan </a> for more info</p>
+        <h3 class="text-center">PESANAN ANDA SEDANG KAMI PROSES</h3>
+            <p class="text-center">Terima Kasih Telah Memesan Dengan Metode Pembayaran Transfer Bank</p>
+            <p class="text-center">Kami akan menghubungi email anda (<b>{{$user_order->users_email}}</b>) atau nomor telepon anda (<b>{{$user_order->mobile}}</b>)</p>
+            <p class="text-center">Silahkan lihat <a href = "/bantuan">Bantuan </a> untuk informasi lebih lanjut</p>
 
         </div>
     </div>
