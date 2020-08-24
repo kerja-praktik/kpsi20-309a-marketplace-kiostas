@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','List Products')
+@section('title','Daftar Produk')
 @section('slider')
 @endsection
 @section('content')
@@ -9,13 +9,18 @@
                 @include('frontEnd.layouts.category_menu')
             </div>
             <div class="col-sm-9 padding-right">
+            @if(Session::has('message'))
+                    <div class="alert alert-success text-center" role="alert">
+                        {{Session::get('message')}}
+                    </div>
+                @endif
                 <div class="features_items"><!--features_items-->
                     <?php
                             if($byCate!=""){
                                 $products=$list_product;
-                                echo '<h2 class="title text-center">Category '.$byCate->name.'</h2>';
+                                echo '<h2 class="title text-center">Kategori '.$byCate->name.'</h2>';
                             }else{
-                                echo '<h2 class="title text-center">List Products</h2>';
+                                echo '<h2 class="title text-center">Daftar Produk</h2>';
                             }
                     ?>
                     @foreach($products as $product)
@@ -25,17 +30,18 @@
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <a href="{{url('/product-detail',$product->id)}}"><img src="{{url('products/small/',$product->image)}}" alt="" /></a>
-                                         <h3>{{$product->p_name}}</h3>
+                                        <h3>{{$product->p_name}}</h4>
                                         <h2>Rp {{number_format($product->price, 0, ".", ".")}}</h2>
-                                        <a href="{{url('/product-detail',$product->id)}}" class="btn btn-default add-to-cart">Detail Produk</a>
+                                        
+                                        <a href="{{url('/product-detail',$product->id)}}" class="btn btn-default cart" >Detail Produk</a>
                                     </div>
                                 </div>
-                                <div class="choose">
-                                    <ul class="nav nav-pills nav-justified">
+                                <!-- <div class="choose">
+                                    <ul class="nav nav-pills nav-justified"> -->
                                         <!-- <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
-                                        <li><a href=""><i class="fa fa-plus-square"></i>Bandingkan</a></li>
-                                    </ul>
-                                </div>
+                                        <!-- <li><a href=""><i class="fa fa-plus-square"></i>Bandingkan</a></li> -->
+                                    <!-- </ul> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                         @endif
