@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','Cart Page')
+@section('title','KIOSTAS')
 @section('slider')
 @endsection
 @section('content')
@@ -14,8 +14,8 @@
                 <table class="table table-condensed">
                     <thead>
                     <tr class="cart_menu">
-                        <td class="image">Item</td>
-                        <td class="description"></td>
+                        <td class="image" width="180px">Item</td>
+                        <td class="description">Deskripsi</td>
                         <td class="price">Harga</td>
                         <td class="quantity">Kuantiatas</td>
                         <td class="total">Total</td>
