@@ -2,17 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Administrator;
 use App\User;
+use App\Orders_model;
+use App\ListOrders_model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
     public function index(){
         $menu_active=1;
         $i=0;
-        return view('administrator.index',compact('menu_active'));
+        $orders=ListOrders_model::orderBy('created_at','asc')->get();
+        return view('backEnd.index',compact('menu_active','orders','i'));
+    }
+    public function administrator(){
+        $menu_active=1;
+        $i=0;
+        $orders=ListOrders_model::orderBy('created_at','asc')->get();
+        return view('administrator.index',compact('menu_active','orders','i'));
     }
 
     public function settings(){
@@ -43,10 +55,6 @@ class AdminController extends Controller
             return redirect('/admin/settings')->with('message','InCorrect Current Password');
         }
     }
-
-
-
-
 
     /*public function login(Request $request){
         if($request->isMethod('post')){
