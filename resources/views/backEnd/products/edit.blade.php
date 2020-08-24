@@ -116,14 +116,14 @@
             var id=$(this).attr('rel');
             var deleteFunction=$(this).attr('rel1');
             swal({
-                title:'Are you sure?',
-                text:"You won't be able to revert this!",
-                type:'warning',
+                title:'Apakah anda yakin?',
+                text:"Data akan permanen diubah!",
+                type:'Peringatan!',
                 showCancelButton:true,
                 confirmButtonColor:'#3085d6',
                 cancelButtonColor:'#d33',
-                confirmButtonText:'Yes, delete it!',
-                cancelButtonText:'No, cancel!',
+                confirmButtonText:'Ya, hapus saja!',
+                cancelButtonText:'Tidak, batalkan!',
                 confirmButtonClass:'btn btn-success',
                 cancelButtonClass:'btn btn-danger',
                 buttonsStyling:false,
