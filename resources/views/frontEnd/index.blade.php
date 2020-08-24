@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','Home Page')
+@section('title','KIOSTAS')
 @section('content')
     <section>
         <div class="container">
@@ -20,15 +20,16 @@
                                         <a href="{{url('/product-detail',$product->id)}}"><img src="{{url('products/small/',$product->image)}}" alt="" /></a>
                                         <h3>{{$product->p_name}}</h3>
                                         <h2>Rp {{number_format($product->price, 0, ".", ".")}}</h2>
+                                       
                                         <a href="{{url('/product-detail',$product->id)}}" class="btn btn-default add-to-cart">Detail Produk</a>
                                     </div>
                                 </div>
-                                <div class="choose">
-                                    <ul class="nav nav-pills nav-justified">
+                                <!-- <div class="choose">
+                                    <ul class="nav nav-pills nav-justified"> -->
                                         <!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
-                                        <li><a href="#"><i class="fa fa-plus-square"></i>Bandingkan</a></li>
-                                    </ul>
-                                </div>
+                                        <!-- <li><a href="#"><i class="fa fa-plus-square"></i>Bandingkan</a></li>
+                                    </ul> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                             @endif
