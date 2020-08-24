@@ -22,6 +22,7 @@
                             @else
                                 <li><a href="{{url('/login_page')}}"><i class="fa fa-lock"></i> Masuk</a></li>
                             @endif
+                            <li><a href="{{ url('/admin') }}"><i class="fa fa-bullhorn"></i>Mitra UMKM</a>
                             <li><a href="/bantuan"><i class="fa fa-question-circle"></i> Bantuan</a></li>
                         </ul>
                     </div>
