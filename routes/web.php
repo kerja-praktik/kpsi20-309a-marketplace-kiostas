@@ -71,7 +71,6 @@ Route::get('/syaratdanketentuan', function(){
     return view('frontEnd/Bantuan/syaratdanketentuan');
 });
 
-
 Route::get('/index', 'AdminController@administrator');
 
 /* Admin Location */
