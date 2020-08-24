@@ -1,26 +1,26 @@
 @extends('backEnd.layouts.master')
-@section('title','List Categories')
+@section('title','Daftar Kategori')
 @section('content')
-    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="{{route('category.index')}}" class="current">Categories</a></div>
+    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> <a href="{{route('category.index')}}" class="current">Kategori</a></div>
     <div class="container-fluid">
         @if(Session::has('message'))
             <div class="alert alert-success text-center" role="alert">
-                <strong>Well done!</strong> {{Session::get('message')}}
+                <strong>Berhasil Ditambahkan!</strong>
             </div>
         @endif
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
-                <h5>List Categories</h5>
+                <h5>Daftar Kategori</h5>
             </div>
             <div class="widget-content nopadding">
                 <table class="table table-bordered data-table">
                     <thead>
                     <tr>
-                        <th>Category Name</th>
-                        <th>Parent Category</th>
-                        <th>Created At</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th>Nama Kategori</th>
+                        <th>Induk Kategori</th>
+                        <th>Dibuat</th>
+                       
+                        <th>Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -36,10 +36,10 @@
                                     @endforeach
                                 </td>
                                 <td style="text-align: center;">{{$category->created_at->diffForHumans()}}</td>
-                                <td style="text-align: center;">{{($category->status==0)?' Disabled':'Enable'}}</td>
+                             
                                 <td style="text-align: center;">
                                     <a href="{{route('category.edit',$category->id)}}" class="btn btn-primary btn-mini">Edit</a>
-                                    <a href="javascript:" rel="{{$category->id}}" rel1="delete-category" class="btn btn-danger btn-mini deleteRecord">Delete</a>
+                                    <a href="javascript:" rel="{{$category->id}}" rel1="delete-category" class="btn btn-danger btn-mini deleteRecord">Hapus</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -64,14 +64,14 @@
            var id=$(this).attr('rel');
            var deleteFunction=$(this).attr('rel1');
            swal({
-               title:'Are you sure?',
+               title:'Apakah anda yakin?',
                text:"You won't be able to revert this!",
                type:'warning',
                showCancelButton:true,
                confirmButtonColor:'#3085d6',
                cancelButtonColor:'#d33',
-               confirmButtonText:'Yes, delete it!',
-               cancelButtonText:'No, cancel!',
+               confirmButtonText:'Ya, Hapus Saja!',
+               cancelButtonText:'Tidak, Batalkan!',
                confirmButtonClass:'btn btn-success',
                cancelButtonClass:'btn btn-danger',
                buttonsStyling:false,
