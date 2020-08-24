@@ -12,21 +12,22 @@ class CheckOutController extends Controller
 {
     public function index(){
         $countries=DB::table('countries')->get();
+        $provinces=DB::table('provinces')->get();
         $user_login=User::where('id',Auth::id())->first();
-        return view('checkout.index',compact('countries','user_login'));
+        return view('checkout.index',compact('countries','provinces','user_login'));
     }
     public function submitcheckout(Request $request){
        $this->validate($request,[
            'billing_name'=>'required',
            'billing_address'=>'required',
            'billing_city'=>'required',
-           'billing_state'=>'required',
+           'billing_province'=>'required',
            'billing_postal_code'=>'required',
            'billing_mobile'=>'required',
            'shipping_name'=>'required',
            'shipping_address'=>'required',
            'shipping_city'=>'required',
-           'shipping_state'=>'required',
+           'shipping_province'=>'required',
            'shipping_postal_code'=>'required',
            'shipping_mobile'=>'required',
        ]);
@@ -36,7 +37,7 @@ class CheckOutController extends Controller
            DB::table('delivery_address')->where('users_id',Auth::id())->update(['name'=>$input_data['shipping_name'],
                'address'=>$input_data['shipping_address'],
                'city'=>$input_data['shipping_city'],
-               'state'=>$input_data['shipping_state'],
+               'province'=>$input_data['shipping_province'],
                'country'=>$input_data['shipping_country'],
                'postal_code'=>$input_data['shipping_postal_code'],
                'mobile'=>$input_data['shipping_mobile']]);
@@ -46,7 +47,7 @@ class CheckOutController extends Controller
                 'name'=>$input_data['shipping_name'],
                 'address'=>$input_data['shipping_address'],
                 'city'=>$input_data['shipping_city'],
-                'state'=>$input_data['shipping_state'],
+                'province'=>$input_data['shipping_province'],
                 'country'=>$input_data['shipping_country'],
                 'postal_code'=>$input_data['shipping_postal_code'],
                 'mobile'=>$input_data['shipping_mobile'],]);
@@ -54,7 +55,7 @@ class CheckOutController extends Controller
         DB::table('users')->where('id',Auth::id())->update(['name'=>$input_data['billing_name'],
             'address'=>$input_data['billing_address'],
             'city'=>$input_data['billing_city'],
-            'state'=>$input_data['billing_state'],
+            'province'=>$input_data['billing_province'],
             'country'=>$input_data['billing_country'],
             'postal_code'=>$input_data['billing_postal_code'],
             'mobile'=>$input_data['billing_mobile']]);
