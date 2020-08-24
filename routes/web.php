@@ -32,9 +32,6 @@ Route::get('/viewcart','CartController@index');
 Route::get('/cart/deleteItem/{id}','CartController@deleteItem');
 Route::get('/cart/update-quantity/{id}/{quantity}','CartController@updateQuantity');
 
-/*Apply Coupon Code*/
-// Route::post('/apply-coupon','CouponController@applycoupon');
-
 /*Simple User Login*/
 Route::get('/login_page','UsersController@index');
 Route::get('/register_page','UsersController@register_index');
@@ -53,7 +50,6 @@ Route::group(['middleware'=>'FrontLogin_middleware'],function (){
     Route::get('/order-review','OrdersController@index');
     Route::post('/submit-order','OrdersController@order');
     Route::get('/cod','OrdersController@cod');
-    Route::get('/paypal','OrdersController@paypal');
     Route::get('/bank-transfer','OrdersController@banktransfer');
 });
 ///
@@ -75,7 +71,7 @@ Route::get('/syaratdanketentuan', function(){
     return view('frontEnd/Bantuan/syaratdanketentuan');
 });
 
-
+Route::get('/index', 'AdminController@administrator');
 
 
 /* Admin Location */
@@ -101,9 +97,7 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
     /// Product Images Gallery
     Route::resource('/image-gallery','ImagesController');
     Route::get('delete-imageGallery/{id}','ImagesController@destroy');
-    /// ///////// Coupons Area //////////
-    Route::resource('/coupon','CouponController');
-    Route::get('delete-coupon/{id}','CouponController@destroy');
+   
 ///
 
 });
