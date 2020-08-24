@@ -12,7 +12,7 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="col-sm-6">
-                                <h1><span>KIOASTAS</span></h1>
+                                <h1><span>KIOSTAS</span></h1>
                                 <h2>UMKM</h2>
                                 <button type="button" class="btn btn-default get"></button>
                             </div>
