@@ -10,7 +10,7 @@
                         <ul>
                         <li> <form action="/" method ="GET" class="header_search_form clearfix">
                             <div class= "search_box icon">
-                            <input type="text" placeholder="Cari Produk" name="cari" id="query" value="{{ request()->input('search') }}" required="required" class="header_search_input" />
+                            <input style="margin-top:9px; type="text" placeholder="Cari Produk" name="cari" id="query" value="{{ request()->input('search') }}" required="required" class="header_search_input" />
                             </div>
                         </form>
                         </li> 
