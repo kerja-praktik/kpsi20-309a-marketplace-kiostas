@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','Detial Page')
+@section('title','Daftar Produk')
 @section('slider')
 @endsection
 @section('content')
@@ -42,8 +42,8 @@
                     <input type="hidden" name="product_color" value="{{$detail_product->p_color}}">
                     <input type="hidden" name="price" value="{{$detail_product->price}}" id="dynamicPriceInput">
                     <div class="product-information"><!--/product-information-->
-                        <img src="{{asset('frontEnd/images/product-details/new.jpg')}}" class="newarrival" alt="" />
-                        <h2>{{$detail_product->p_name}}</h2>
+                        <img src="{{asset('frontEnd/images/product-details')}}" class="newarrival" alt="" />
+                        <h3>{{$detail_product->p_name}}</h3>
                         <p>Kode Produk: {{$detail_product->p_code}}</p>
                         <span>
                             <select name="size" id="idSize" class="form-control">
@@ -52,13 +52,13 @@
                                 <option value="{{$detail_product->id}}-{{$attrs->size}}">{{$attrs->size}}</option>
                             @endforeach
                         </select>
-                        </span><br>
+                        </span>
                         <span>
-                            <span id="dynamic_price">Rp.{{$detail_product->price}}</span>
+                        <span id="dynamicPriceInput">Rp {{number_format($detail_product->price, 0, ".", ".")}}</span>
                             <label>Kuantitas:</label>
                             <input type="text" name="quantity" value="{{$totalStock}}" id="inputStock"/>
                             @if($totalStock>0)
-                            <button type="submit" class="btn btn-fefault cart" id="buttonAddToCart">
+                            <button type="submit" class="btn btn-default cart" id="buttonAddToCart">
                                 <i class="fa fa-shopping-cart"></i>
                                 Tambahkan ke keranjang
                             </button>
@@ -66,14 +66,13 @@
                         </span>
                         <p><b>Ketersediaan:</b>
                             @if($totalStock>0)
-                                <span id="availableStock">Ada</span>
+                                <span id="availableStockInput">Ada</span>
                             @else
-                                <span id="availableStock">Habis</span>
+                                <span id="availableStockInput">Habis</span>
                             @endif
                         </p>
-                        <!-- <p><b>Condition:</b> New</p>
-                        <a href=""><img src="{{asset('frontEnd/images/product-details/share.png')}}" class="share img-responsive"  alt="" /></a> -->
-                    </div><!--/product-information-->
+                       
+                    </div>
                 </form>
 
             </div>
@@ -82,7 +81,7 @@
         <div class="category-tab shop-details-tab"><!--category-tab-->
             <div class="col-sm-12">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#details" data-toggle="tab">Detail</a></li>
+                    <li class="active"><a href="#details" data-toggle="tab">Deskripsi</a></li>
                     <li><a href="#reviews" data-toggle="tab">Review </a></li>
                 </ul>
             </div>
@@ -131,10 +130,11 @@
                                         <div class="single-products">
                                             <div class="productinfo text-center">
                                                 <img src="{{url('/products/small',$item->image)}}" alt="" style="width: 150px;"/>
-                                                <h2>Rp. {{$item->price}}</h2>
-                                                <p>{{$item->p_name}}</p>
-                                                <button type="submit" class="btn btn-fefault cart" id="buttonAddToCart">
-                                                <i class="fa fa-shopping-cart"></i> Tambahkan ke keranjang</button>
+                                                <span>
+                                                <h4>{{$item->p_name}}</h4>
+                                                <h2>Rp {{ number_format($item->price, 0, ".", ".")}}</h2>
+                                                 <a href="{{url('/product-detail',$item->id)}}" class="btn btn-default cart" id="buttonAddToCart">Detail Produk</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
