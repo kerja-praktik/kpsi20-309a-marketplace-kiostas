@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Profile_model;
+use App\Cart_model;
 use App\User;
+use App\Orders_model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -24,8 +26,14 @@ class UsersController extends Controller
         $input_data=$request->all();
         $input_data['password']=Hash::make($input_data['password']);
         User::create($input_data);
-        return back()->with('message','Akun Sudah Terdaftar!');
+        return back()->with('message','Akun Berhasil Terdaftar!');
     }
+    public function account(){
+        $user_login=User::where('id',Auth::id())->first();
+        $orders_user=Orders_model::where([['users_id', $user_login->id]])->get();
+        return view('users.account',compact('user_login', 'orders_user'));
+    }
+
     public function login(Request $request){
         $input_data=$request->all();
         if(Auth::attempt(['email'=>$input_data['email'],'password'=>$input_data['password']])){
@@ -40,23 +48,19 @@ class UsersController extends Controller
         Session::forget('frontSession');
         return redirect('/');
     }
-    public function account(){
-        $countries=DB::table('countries')->get();
-        $user_login=User::where('id',Auth::id())->first();
-        return view('users.account',compact('countries','user_login'));
-    }
+    
     public function updateprofile(Request $request,$id){
         $this->validate($request,[
             'address'=>'required',
             'city'=>'required',
-            'state'=>'required',
+            'province'=>'required',
             'mobile'=>'required',
         ]);
         $input_data=$request->all();
         DB::table('users')->where('id',$id)->update(['name'=>$input_data['name'],
             'address'=>$input_data['address'],
             'city'=>$input_data['city'],
-            'state'=>$input_data['state'],
+            'province'=>$input_data['province'],
             'country'=>$input_data['country'],
             'postal_code'=>$input_data['postal_code'],
             'toko'=>$input_data['toko'],
