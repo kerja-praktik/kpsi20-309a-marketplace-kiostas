@@ -24,12 +24,6 @@
                                         <a href="{{url('/product-detail',$product->id)}}" class="btn btn-default add-to-cart">Detail Produk</a>
                                     </div>
                                 </div>
-                                <!-- <div class="choose">
-                                    <ul class="nav nav-pills nav-justified"> -->
-                                        <!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
-                                        <!-- <li><a href="#"><i class="fa fa-plus-square"></i>Bandingkan</a></li>
-                                    </ul> -->
-                                <!-- </div> -->
                             </div>
                         </div>
                             @endif
