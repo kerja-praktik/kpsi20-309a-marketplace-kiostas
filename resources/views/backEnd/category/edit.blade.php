@@ -7,21 +7,21 @@
             <div class="span12">
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
-                        <h5>Edit Category</h5>
+                        <h5>Edit Kategori</h5>
                     </div>
                     <div class="widget-content nopadding">
                         <form class="form-horizontal" method="post" action="{{route('category.update',$edit_category->id)}}" name="basic_validate" id="basic_validate" novalidate="novalidate">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             {{method_field("PUT")}}
                             <div class="control-group{{$errors->has('name')?' has-error':''}}">
-                                <label class="control-label">Category Name :</label>
+                                <label class="control-label">Nama Kategori :</label>
                                 <div class="controls">
                                     <input type="text" name="name" id="name" value="{{$edit_category->name}}" required>
                                     <span class="text-danger" style="color: red;">{{$errors->first('name')}}</span>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label">Category Lavel :</label>
+                                <label class="control-label">Level Kategori :</label>
                                 <div class="controls" style="width: 245px;">
                                     <select name="parent_id" id="parent_id">
                                         {{--@foreach($cate_levels as $key=>$value)
