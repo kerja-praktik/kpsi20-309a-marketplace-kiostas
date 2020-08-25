@@ -1,41 +1,41 @@
 @extends('backEnd.layouts.master')
-@section('title','Add Attribute')
+@section('title','Tambah Atribut')
 @section('content')
-    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="{{route('product.index')}}">Products</a> <a href="#" class="current">Add Attribute</a> </div>
+    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> <a href="{{route('product.index')}}">Produk</a> <a href="#" class="current">Tambah Atribut</a> </div>
     <div class="container-fluid">
         @if(Session::has('message'))
             <div class="alert alert-success text-center" role="alert">
-                <strong>Well done! &nbsp;</strong>{{Session::get('message')}}
+                <strong>Berhasil! &nbsp;</strong>{{Session::get('message')}}
             </div>
         @endif
             <div class="row-fluid">
                 <div class="span6">
                     <div class="widget-box">
                         <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
-                            <h5>Product : {{$product->p_name}}</h5>
+                            <h5>Produk : {{$product->p_name}}</h5>
                         </div>
                         <div class="widget-content nopadding">
                             <ul class="recent-posts">
                                 <li>
                                     <div class="user-thumb"> <img width="40" height="40" alt="User" src="{{url('products/small',$product->image)}}"> </div>
                                     <div class="article-post">
-                                        <span class="user-info">Product Code : <b>{{$product->p_code}}</b></span>
-                                        <p>Product Color : <b>{{$product->p_color}}</b></p>
+                                        <span class="user-info">Kode Produk : <b>{{$product->p_code}}</b></span>
+                                        <p>Varian Produk : <b>{{$product->p_color}}</b></p>
                                     </div>
                                 </li>
                                 <li>
                                     <form action="{{route('product_attr.store')}}" method="post" role="form">
-                                        <legend>Add Attribute</legend>
+                                        <legend>Tambah Atribut</legend>
                                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                                         <div class="form-group">
                                             <input type="hidden" name="products_id" value="{{$product->id}}">
                                             <input type="text" class="form-control" name="sku" value="{{old('sku')}}" id="sku" placeholder="SKU" required>
-                                            <input type="text" class="form-control" name="size" value="{{old('size')}}" id="size" placeholder="Size" required>
-                                            <input type="text" class="form-control" name="price" value="{{old('price')}}" id="price" placeholder="Price" required>
+                                            <input type="text" class="form-control" name="size" value="{{old('size')}}" id="size" placeholder="Ukuran" required>
+                                            <input type="text" class="form-control" name="price" value="{{old('price')}}" id="price" placeholder="Harga" required>
                                             <span style="color: red;">{{$errors->first('price')}}</span>
-                                            <input type="number" class="form-control" name="stock" value="{{old('stock')}}" id="stock" placeholder="Stock" required>
+                                            <input type="number" class="form-control" name="stock" value="{{old('stock')}}" id="stock" placeholder="Persediaan" required>
                                         </div>
-                                        <button type="submit" class="btn btn-success">Add</button>
+                                        <button type="submit" class="btn btn-success">Tambah</button>
                                     </form>
                                 </li>
                             </ul>
@@ -45,7 +45,7 @@
                 <div class="span6">
                     <div class="widget-box">
                         <div class="widget-title"> <span class="icon"><i class="icon-time"></i></span>
-                            <h5>List Products Attribute</h5>
+                            <h5>Daftar Atribut Produk</h5>
                         </div>
                         <div class="widget-content nopadding">
                             <form action="{{route('product_attr.update',$product->id)}}" method="post" role="form">
@@ -55,10 +55,10 @@
                                 <thead>
                                 <tr>
                                     <th>SKU</th>
-                                    <th>Size</th>
-                                    <th>Price</th>
-                                    <th>Stock</th>
-                                    <th>Action</th>
+                                    <th>Ukuran</th>
+                                    <th>Harga</th>
+                                    <th>Persediaan</th>
+                                    <th>Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -79,7 +79,7 @@
                                     </td>
                                     <td style="text-align: center; ">
                                         <button type="submit" class="btn btn-success btn-mini">Edit</button>
-                                        <a href="javascript:" rel="{{$attribute->id}}" rel1="delete-attribute" class="btn btn-danger btn-mini deleteRecord">Delete</a>
+                                        <a href="javascript:" rel="{{$attribute->id}}" rel1="delete-attribute" class="btn btn-danger btn-mini deleteRecord">Hapus</a>
                                     </td>
                                 </tr>
                                 @endforeach
