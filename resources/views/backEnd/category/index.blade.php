@@ -5,7 +5,7 @@
     <div class="container-fluid">
         @if(Session::has('message'))
             <div class="alert alert-success text-center" role="alert">
-                <strong>Berhasil Ditambahkan!</strong>
+                <strong>Selesai!</strong>
             </div>
         @endif
         <div class="widget-box">
@@ -64,18 +64,18 @@
            var id=$(this).attr('rel');
            var deleteFunction=$(this).attr('rel1');
            swal({
-            title:'Apakah anda yakin?',
-                text:"Data akan permanen diubah!",
-                type:'Peringatan!',
-                showCancelButton:true,
-                confirmButtonColor:'#3085d6',
-                cancelButtonColor:'#d33',
-                confirmButtonText:'Ya, hapus saja!',
-                cancelButtonText:'Tidak, batalkan!',
-                confirmButtonClass:'btn btn-success',
-                cancelButtonClass:'btn btn-danger',
-                buttonsStyling:false,
-                reverseButtons:true
+               title:'Apakah Anda Yakin?',
+               text:"Data Tidak Akan Bisa Dikembalikan!",
+               type:'warning',
+               showCancelButton:true,
+               confirmButtonColor:'#3085d6',
+               cancelButtonColor:'#d33',
+               confirmButtonText:'Ya, hapus saja!',
+               cancelButtonText:'Tidak, Batalkan!',
+               confirmButtonClass:'btn btn-success',
+               cancelButtonClass:'btn btn-danger',
+               buttonsStyling:false,
+               reverseButtons:true
            },function () {
               window.location.href="/admin/"+deleteFunction+"/"+id;
            });
