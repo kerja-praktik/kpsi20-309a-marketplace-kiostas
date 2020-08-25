@@ -59,7 +59,7 @@
                     <div class="control-group">
                         <label for="description" class="control-label">Deskripsi</label>
                         <div class="controls{{$errors->has('description')?' has-error':''}}">
-                            <textarea class="textarea_editor span12" name="description" id="description" rows="6" placeholder="Product Description" style="width: 580px;">{{old('description')}}</textarea>
+                            <textarea class="textarea_editor span12" name="description" id="description" rows="6" placeholder="Deskripsi Produk" style="width: 580px;">{{old('description')}}</textarea>
                             <span class="text-danger">{{$errors->first('description')}}</span>
                         </div>
                     </div>
