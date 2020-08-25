@@ -1,10 +1,10 @@
 @extends('backEnd.layouts.master')
-@section('title','Dashboard')
+@section('title','Daftar Pesanan')
 @section('content')
     <!--breadcrumbs-->
     <div id="content-header">
     <div id="breadcrumb"> 
-    <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Orders</a></div>
+    <a href="{{url('/admin')}}" title="Kembali ke Beranda" class="tip-bottom"><i class="icon-home"></i> Beranda</a> <a href="#" class="current">Pesanan</a></div>
     </div>
 
     <div class="container-fluid">
@@ -48,9 +48,9 @@
                             <td style="vertical-align: middle;">{{$order->created_at}}</td>
                             <td style="vertical-align: middle;">{{$order->order_status}}</td>
                             <td style="text-align: center; vertical-align: middle;">
-                                <a href="#myModal{{$order->id}}" data-toggle="modal" class="btn btn-info btn-mini">View</a>
+                                <a href="#myModal{{$order->id}}" data-toggle="modal" class="btn btn-info btn-mini">Tampil</a>
                                 <a href="#" class="btn btn-primary btn-mini">Edit</a>
-                                <a href="javascript:" rel="{{$order->id}}" rel1="cancel-order" class="btn btn-danger btn-mini deleteRecord">Cancel</a>
+                                <a href="javascript:" rel="{{$order->id}}" rel1="cancel-order" class="btn btn-danger btn-mini deleteRecord">Batal</a>
                             </td>
                         </tr>
                         
