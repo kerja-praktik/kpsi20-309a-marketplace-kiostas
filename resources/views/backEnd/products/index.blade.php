@@ -1,7 +1,7 @@
 @extends('backEnd.layouts.master')
 @section('title','Daftar Produk')
 @section('content')
-    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> <a href="{{route('product.index')}}" class="current">Products</a></div>
+    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Kembali ke Beranda" class="tip-bottom"><i class="icon-home"></i> Beranda</a> <a href="{{route('product.index')}}" class="current">Produk</a></div>
     <div class="container-fluid">
         @if(Session::has('message'))
             <div class="alert alert-success text-center" role="alert">
@@ -39,7 +39,7 @@
                             <td style="vertical-align: middle;">{{$product->p_code}}</td>
                             <td style="vertical-align: middle;">{{$product->p_color}}</td>
                             <td style="vertical-align: middle;">Rp {{number_format($product->price, 0, ".", ".")}}</td>
-                            <td style="vertical-align: middle;text-align: center;"><a href="{{route('image-gallery.show',$product->id)}}" class="btn btn-default btn-mini">Tambah Gambar</a></td>
+                            <td style="vertical-align: middle;text-align: center;"><a href="{{route('image-gallery.show',$product->id)}}" class="btn btn-success btn-mini">Tambah Gambar</a></td>
                             <td style="vertical-align: middle;text-align: center;"><a href="{{route('product_attr.show',$product->id)}}" class="btn btn-success btn-mini">Tambah Atribut</a></td>
                             <td style="text-align: center; vertical-align: middle;">
                                 <a href="#myModal{{$product->id}}" data-toggle="modal" class="btn btn-info btn-mini">Tampil</a>
