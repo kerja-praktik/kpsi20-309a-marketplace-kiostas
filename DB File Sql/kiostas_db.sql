@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2020 at 06:12 AM
+-- Generation Time: Aug 25, 2020 at 08:55 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -47,7 +47,7 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `products_id`, `product_name`, `product_code`, `product_color`, `size`, `price`, `quantity`, `user_email`, `session_id`, `created_at`, `updated_at`) VALUES
-(67, 40, 'Jasa Urut', 'JR01', 'Jasa', 'Urut Pria', 55000.00, 1, 'weshare@gmail.com', '0sQ531e8CLx0d7ifxjYWS3Fryre7sEA9P5qhwlM5', '2020-08-20 21:04:24', '2020-08-20 21:04:24');
+(68, 36, 'Salon Kecantikan', 'SK01', 'Jasa', 'Paket (Salon Rambut + Make Up)', 250000.00, 1, 'weshare@gmail.com', 'Xn3xiUKncsWpFh7JFKVVE2NTRB8HTKw7R9aIlwhJ', '2020-08-23 20:45:59', '2020-08-23 20:45:59');
 
 -- --------------------------------------------------------
 
@@ -132,7 +132,7 @@ CREATE TABLE `delivery_address` (
 
 INSERT INTO `delivery_address` (`id`, `users_id`, `users_email`, `name`, `address`, `city`, `province`, `country`, `postal_code`, `mobile`, `created_at`, `updated_at`) VALUES
 (3, 1, 'demo@gmail.com', 'Maria Anastasya Manullang', 'Medan', 'Boston', 'Kota', 'Indonesia', '001', '89992728', NULL, NULL),
-(4, 2, 'mariaanastasyamanullang@gmail.com', 'Lukas', 'Medan Denai', 'Medan', 'Sumatera Utara', 'Indonesia', '2025', '082188567812', NULL, NULL),
+(4, 2, 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', 'Indonesia', '20116', '082188567812', NULL, NULL),
 (5, 9, 'jessycha@gmail.com', 'Aldo', 'Jl. Simalingkar 9', 'Medan', 'Sumatera Utara', 'Indonesia', '001', '89992728', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -199,19 +199,13 @@ INSERT INTO `orders` (`id`, `users_id`, `users_email`, `name`, `address`, `city`
 (45, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo Yuda', 'Jl. Simalingkar 9', 'Balige', 'Sumatera Utara', '001', 'Indonesia', '89992728', NULL, 30000.00, 'sukses', 'COD', '1030000', '2020-08-19 00:29:57', '2020-08-19 00:29:57'),
 (47, '2', 'mariaanastasyamanullang@gmail.com', 'Lukas', 'Medan Denai', 'Medan', 'Sumatera Utara', '2025', 'Indonesia', '082188567812', NULL, 30000.00, 'sukses', 'COD', '230000', '2020-08-19 01:54:49', '2020-08-19 01:54:49'),
 (46, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Balige', 'Sumatera Utara', '20116', 'Indonesia', '087715151515', NULL, 30000.00, 'sukses', 'COD', '230000', '2020-08-19 01:36:31', '2020-08-19 01:36:31'),
-(48, '9', 'jessycha@gmail.com', 'Maria Anastasya Manullang', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '087715151515', NULL, 30000.00, 'sukses', 'COD', '310000', '2020-08-20 21:02:42', '2020-08-20 21:02:42');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `password_resets`
---
-
-CREATE TABLE `password_resets` (
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(48, '9', 'jessycha@gmail.com', 'Maria Anastasya Manullang', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '087715151515', NULL, 30000.00, 'sukses', 'COD', '310000', '2020-08-20 21:02:42', '2020-08-20 21:02:42'),
+(49, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '082188567812', NULL, 30000.00, 'sukses', 'COD', '280000', '2020-08-23 20:46:40', '2020-08-23 20:46:40'),
+(50, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '082188567812', NULL, 30000.00, 'sukses', 'COD', '280000', '2020-08-23 20:47:23', '2020-08-23 20:47:23'),
+(51, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '082188567812', NULL, 30000.00, 'sukses', 'banktransfer', '280000', '2020-08-23 20:52:04', '2020-08-23 20:52:04'),
+(52, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '082188567812', NULL, 30000.00, 'sukses', 'banktransfer', '280000', '2020-08-23 20:53:31', '2020-08-23 20:53:31'),
+(53, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '082188567812', NULL, 30000.00, 'sukses', 'COD', '280000', '2020-08-23 20:56:49', '2020-08-23 20:56:49'),
+(54, '2', 'mariaanastasyamanullang@gmail.com', 'Aldo', 'Jl. Kolonel Yos Sudarso', 'Medan', 'Sumatera Utara', '20116', 'Indonesia', '082188567812', NULL, 30000.00, 'sukses', 'COD', '280000', '2020-08-23 20:57:14', '2020-08-23 20:57:14');
 
 -- --------------------------------------------------------
 
@@ -260,27 +254,27 @@ INSERT INTO `products` (`id`, `categories_id`, `p_name`, `p_code`, `p_color`, `d
 (53, 38, 'Eyeliner Pen', 'EP32', 'Mizzu', 'Eyeliner Pen yang bisa membuat penampilanmu menjadi lebih menarik sehingga&nbsp;menambah rasa percaya dirimu di depan publik', 50000, '1597934778-eyeliner-pen.JPG', '2020-08-20 07:46:18', '2020-08-20 07:46:18'),
 (54, 38, 'Rollover Crayon', 'RC35', 'LIP', 'ROLLOVER REACTION LIP CHEEK CRAYON CHUNKY – ROTHKO\r\nCRAYON CHUNKY - ROTHKO BPOM RI : NA18181200060\r\nMark Rothko truly understood the power of color. His paintings are always void of objects, there are only colorful rectangles to translate meanings. Daring, chic, and rebellious, this color is all you need to have all eyes on you.\r\n\r\nAPPLICATION TIPS\r\n\r\nSTEP 1 Apply CHUNKY! directly to your lips and cheeks.\r\n\r\nSTEP 2 Use your fingers to blend and you’re good to go!\r\n\r\nPRO TIP Draw a sheer layer of color for a more subtle effect or build it up to make CHUNKY! unapologetically bold!', 125000, '1597934987-rollover-crayon.PNG', '2020-08-20 07:49:48', '2020-08-20 07:50:33'),
 (55, 38, 'Cushion Compact', 'CC45', 'Honey', 'Deskripsi Refill 102 Honey Toast Cushion Compact Rollover Reaction 102 Honey Toast For medium skin-tone with yellow undertone.\r\nWe are all about enhanced and defined complexion minus the hassle. Our cult-covetable Cushion Compact Tinted Moisturizer comes even merrier with a refill pack! Now, you don’t have to be worried about running out of your cushion compact as it is easily be replaced with a fresh refill. Antimicrobial ruby puff included.', 135000, '1597935316-cushion-compact.PNG', '2020-08-20 07:55:17', '2020-08-20 07:55:17'),
-(56, 39, 'Elqueen Craft', 'EC42', 'Pouch', 'Elqueen Craft UMKM Make Up Pouch – Cream\r\nMake up pouch berbahan outer kanvas dan inner laken yang didesain simple dengan print motif paris. Pouch yang memudahkan Anda untuk memuat dan membawa berbagai peralatan make up Anda saat beraktivitas sehari-hari. Dilengkapi dengan ruang utama dengan zipper. Mudah dicuci.<br>Material : outer kanvas dan inner laken, \r\nDimensi : 21 x 4,5 x 13 cm', 32000, '1597935478-elqueen-craft.PNG', '2020-08-20 07:57:59', '2020-08-20 07:58:53'),
+(56, 39, 'Elqueen Craft', 'EC42', 'Pouch', 'Elqueen Craft UMKM Make Up Pouch – Cream\r\nMake up pouch berbahan outer kanvas dan inner laken yang didesain simple dengan print motif paris. Pouch yang memudahkan Anda untuk memuat dan membawa berbagai peralatan make up Anda saat beraktivitas sehari-hari. Dilengkapi dengan ruang utama dengan zipper. Mudah dicuci.Material : outer kanvas dan inner laken, \r\nDimensi : 21 x 4,5 x 13 cm', 32000, '1597935478-elqueen-craft.PNG', '2020-08-20 07:57:59', '2020-08-20 07:58:53'),
 (57, 42, 'Sorele', 'SR18', 'Beef', 'SORELE Sorondeng Lezat Produk Kuliner UMKM Pontianak – clamp\r\nSorondeng merupakan salah satu warisan kuliner Budaya Melayu.Berdasarkan tradisi yang ada, Sorondeng selalu disajikan saat ada acara besar bersama Ketupat Colet Rendang, khas Kabupaten Ketapang, Salah satu daerah di Kalimantan Barat. Sorondeng didominasi oleh parutan kelapa tua kering yang dibumbui.\r\nSebagian besar orang Indonesia menyebutnya sebagai Serundeng.', 35000, '1597935949-sorele.jpg', '2020-08-20 08:05:50', '2020-08-20 08:05:50'),
 (58, 42, 'Abon Lele', 'L3L3', 'Abon', 'Abon\r\nlele enak dan bergizi produksi umkml okal tanpa pewarna dan pengawet kadaluarsa.', 65000, '1597936464-abon-lele.jpg', '2020-08-20 08:14:24', '2020-08-20 08:14:39'),
-(59, 42, 'Jipang Kacang', 'JK95', 'kacang', 'Jipang Kacang Makanan Khas Kebumen UMKM Kebumen.<br><span>Komposisi\r\n:<br>\r\nTerbuatdarikacang yang renyahdandilengkapidengangulamerah yang manismenjadikanmakanankhas\r\nKEBUMEN yang lezat, gurih, manisdannikmat</span><br>', 19900, '1597936631-jipang-kacang.jpg', '2020-08-20 08:17:11', '2020-08-20 08:17:11'),
-(60, 44, 'Madu Foresbi', 'MF30', 'Madu', '<span>Madu\r\nForesbi adalah 100% madu asli yang dikumpulkan oleh masyarakat desa yang\r\ntinggal di sekitar hutan di wilayah Riau.<br>\r\nManfaat madu:<br>\r\n1. Meningkatkan stamina<br>\r\n2. Meningkatkan metabolisme tubuh<br>\r\n3. Melancarkan peredaran darah<br>\r\n4. Meredakan batuk<br>\r\n<br>\r\nMembeli produk ini berarti kamu telah turut serta dalam mendukung program\r\npemberdayaan masyarakat desa sekitar hutan.</span>', 65000, '1597937010-madu-foresbi.jpg', '2020-08-20 08:23:30', '2020-08-20 08:23:30'),
-(61, 44, 'Yougurt Murni', 'YM22', 'yougurt', 'Yougurt Tanpa Pemanis Buatan<br>Yoghurt yang terbuat dari susu berkualitas Asli\r\nBoyolali dengan hasil uji laboratorium, Kualitas susu di atas standart, yogood\r\nkental karena tanpa campuran, tidak terlalu asam nyaman di lidah.&nbsp;<br>', 9000, '1597937218-yougurt-murni.jpg', '2020-08-20 08:26:58', '2020-08-20 08:29:29'),
-(62, 44, 'Minyak Asli', 'MS15', 'Minyak', 'Minyak Kayu Putih Asli Namlea<br><br>Khasiat:&nbsp;Membantu meredakan masuk angin, sakit peru, mual, muntah,\r\ngatal-gatal, akibat gigitan serangga.', 70000, '1597937547-minyak-asli.jpg', '2020-08-20 08:32:27', '2020-08-20 08:32:27'),
-(63, 43, 'Rempah Sauna', 'RS85', 'No Brand', 'Rempah Herbal<br>Warisan Putri Keraton untuk menjaga kecantikan dan kesegaran kulit dengan bahan rempah asli Indonesia&nbsp;<span>di antaranya: akarwangi, jerukpurut, lempuyang, sereh,\r\nkayu secang dan klabet.&nbsp; <br>Manfaat: menjaga kelembutan dan mencerahkan kulit,\r\nmengatasi susah tidur (insomnia),\r\nmenghilangkan bau badan dan memperbaiki sirkulasi oksigen pada peredaran darah,\r\nmencegah keriput, detox bagi tubuh, serta menghilangkan letih lesu.&nbsp;</span>', 20000, '1597939433-rempah-sauna.jpeg', '2020-08-20 09:03:54', '2020-08-20 09:03:54'),
-(64, 43, 'Wedang Kunyit', 'WK65', 'Rempah', 'Wedang Kunyit + Rempah minuman terbuat dari rempah - rempah Alami Nusantara yang\r\nkaya akan manfaat bagi kesehatan dan imunitas.&nbsp;<br>', 8000, '1597939693-wedang-kunyit.jpeg', '2020-08-20 09:08:14', '2020-08-20 09:10:49'),
-(65, 43, 'Ketumbar', 'KB45', 'ketumbar utuh', 'Bumbu dan Rempah Ketumbar Utuh Coriander Bumbu Masak<br><ul>\r\n <li>Ketumbar</li>\r\n <li>Diolah secara highienis dan berkualitas</li>\r\n <li>Memiliki berbagai macam manfaat seperti mengatasi gangguan pencernaan,\r\n     menjaga kesehatan gigi dan mulut, mengatasi infeksi jamur dan bakteri,\r\n     dan masih banyak lainnya</li>\r\n <li>Ideal\r\n     dijadikan tambahan bumbu masak Anda</li></ul>', 5000, '1597940036-ketumbar.jpg', '2020-08-20 09:13:57', '2020-08-20 09:13:57'),
-(66, 28, 'Beras Maknyuss', 'BM78', 'High', 'Tanpa pengawet, tanpa pemutih, tanpa pewangi', 150000, '1597940196-beras-maknyuss.JPG', '2020-08-20 09:16:36', '2020-08-20 09:16:36'),
+(59, 42, 'Jipang Kacang', 'JK95', 'kacang', 'Jipang Kacang Makanan Khas Kebumen UMKM Kebumen.\r\nKomposisi:\r\nTerbuat dari kacang yang renyah dan dilengkapi dengan gula merah yang manis menjadikan makanan khas KEBUMEN yang lezat, gurih, manis dan nikmat.', 19900, '1597936631-jipang-kacang.jpg', '2020-08-20 08:17:11', '2020-08-20 08:17:11'),
+(60, 44, 'Madu Foresbi', 'MF30', 'Madu', 'Madu Foresbi adalah 100% madu asli yang dikumpulkan oleh masyarakat desa yang tinggal di sekitar hutan di wilayah Riau.<br>\r\nManfaat madu:\r\n1. Meningkatkan stamina\r\n2. Meningkatkan metabolisme tubuh\r\n3. Melancarkan peredaran darah\r\n4. Meredakan batuk\r\nMembeli produk ini berarti kamu telah turut serta dalam mendukung program pemberdayaan masyarakat desa sekitar hutan.', 65000, '1597937010-madu-foresbi.jpg', '2020-08-20 08:23:30', '2020-08-20 08:23:30'),
+(61, 44, 'Yougurt Murni', 'YM22', 'yougurt', 'Yougurt Tanpa Pemanis Buatan Yoghurt yang terbuat dari susu berkualitas Asli Boyolali dengan hasil uji laboratorium, Kualitas susu di atas standart, Yougurt kental karena tanpa campuran, tidak terlalu asam nyaman di lidah.', 9000, '1597937218-yougurt-murni.jpg', '2020-08-20 08:26:58', '2020-08-20 08:29:29'),
+(62, 44, 'Minyak Asli', 'MS15', 'Minyak', 'Minyak Kayu Putih Asli Namlea dengan Khasiat membantu meredakan masuk angin, sakit peru, mual, muntah, gatal-gatal, akibat gigitan serangga.', 70000, '1597937547-minyak-asli.jpg', '2020-08-20 08:32:27', '2020-08-20 08:32:27'),
+(63, 43, 'Rempah Sauna', 'RS85', 'No Brand', 'Rempah Herbal Warisan Putri Keraton untuk menjaga kecantikan dan kesegaran kulit dengan bahan rempah asli Indonesia diantaranya: akar wangi, jeruk purut, lempuyang, sereh,kayu secang dan klabet.\r\nManfaat: menjaga kelembutan dan mencerahkan kulit, mengatasi susah tidur (insomnia),menghilangkan bau badan dan memperbaiki sirkulasi oksigen pada peredaran darah,mencegah keriput, detox bagi tubuh, serta menghilangkan letih lesu.', 20000, '1597939433-rempah-sauna.jpeg', '2020-08-20 09:03:54', '2020-08-20 09:03:54'),
+(64, 43, 'Wedang Kunyit', 'WK65', 'Rempah', 'Wedang Kunyit + Rempah minuman terbuat dari rempah - rempah Alami Nusantara yang kaya akan manfaat bagi kesehatan dan imunitas.', 8000, '1597939693-wedang-kunyit.jpeg', '2020-08-20 09:08:14', '2020-08-20 09:10:49'),
+(65, 43, 'Ketumbar', 'KB45', 'ketumbar utuh', 'Bumbu dan Rempah Ketumbar Utuh Coriander Bumbu Masak: Ketumbar, Diolah secara highienis dan berkualitas, Memiliki berbagai macam manfaat seperti mengatasi gangguan pencernaan, menjaga kesehatan gigi dan mulut, mengatasi infeksi jamur dan bakteri, dan masih banyak lainnya Ideal dijadikan tambahan bumbu masak Anda.', 5000, '1597940036-ketumbar.jpg', '2020-08-20 09:13:57', '2020-08-20 09:13:57'),
+(66, 28, 'Beras Maknyuss', 'BM78', 'High', 'Tanpa pengawet, tanpa pemutih, tanpa pewangi.', 150000, '1597940196-beras-maknyuss.JPG', '2020-08-20 09:16:36', '2020-08-20 09:16:36'),
 (67, 28, 'Gula Rafinasi', 'SLY88', 'Gula', 'Gula Pasir dengan kondisi baru', 400000, '1597940340-gula-rafinasi.JPG', '2020-08-20 09:19:00', '2020-08-20 09:19:00'),
-(68, 45, 'Alpukat Mentega', 'AM44', 'Alpukat', '<div>Alpukat mentega unggulan / alpukat mentega lampung / alpukat mentega</div><div>satu kilo perkiraan 4 sampai 5 buah</div><div>dikirim dalam keadaan setengah matang, apabila belum dimakan cukup letakkan di</div><div>tempat terbuka dalam suhu ruang. jangan di dalam kantong plastik</div><div>jangan di kulkas, jangan di rendam dalam beras maupun dibungkus kain.&nbsp;</div><div>Alpukat di tekan dan terasa seperti sudah empuk seperti menekan dodol artinya&nbsp;</div><div>alpukat siap komsumsi. Bijak dalam menentukan kapan waktu komsumsi dan penyimpanan&nbsp;</div><div>yang benar adalah tujuan untuk dapat hasil alpukat yang baik.</div>', 35000, '1597940576-alpukat-mentega.JPG', '2020-08-20 09:22:56', '2020-08-20 09:22:56'),
+(68, 45, 'Alpukat Mentega', 'AM44', 'Alpukat', 'Alpukat mentega unggulan/alpukat mentega lampung/alpukat mentega satu kilo perkiraan 4 sampai 5 buah dikirim dalam keadaan setengah matang, apabila belum dimakan cukup letakkan di tempat terbuka dalam suhu ruang. jangan di dalam kantong plastik. Jangan di kulkas, jangan di rendam dalam beras maupun dibungkus kain. Alpukat di tekan dan terasa seperti sudah empuk seperti menekan dodol artinya alpukat siap komsumsi. Bijak dalam menentukan kapan waktu komsumsi dan penyimpanan yang benar adalah tujuan untuk dapat hasil alpukat yang baik.', 35000, '1597940576-alpukat-mentega.JPG', '2020-08-20 09:22:56', '2020-08-20 09:22:56'),
 (69, 45, 'Kurma Sukari Basah', 'KSB4', 'Kurma', 'Kurma Original / Sukari Basah', 100000, '1597940744-kurma-sukari-basah.JPG', '2020-08-20 09:25:45', '2020-08-20 09:25:45'),
 (70, 45, 'Kentang Dieng', 'KD25', 'kentang', 'Makanan Pokok di Negara Eropa', 8000, '1597940914-kentang-dieng.JPG', '2020-08-20 09:28:34', '2020-08-20 09:28:34'),
-(71, 46, 'Ikan Asin Daging', 'AS12', 'Ikan', 'Ikan Asin Daging Tenggiri<br>ikan asin daging tenggiri/tenggiri kualitas asli nomor 1<br>', 15000, '1597941061-ikan-asin-daging.JPG', '2020-08-20 09:31:01', '2020-08-20 09:31:01'),
-(72, 46, 'Bliss Salmon', 'BS89', 'Salmon', '<div>bliss kitchen trim salmon fish norway and trout tetelan daging ikan salmon</div><div>-daging salmon fresh</div><div>-memiliki banyak kandungan nutrisi</div><div>-dapat dikonsumsi oleh semua kalangan</div>', 13500, '1597941124-bliss-salmon.JPG', '2020-08-20 09:32:05', '2020-08-20 09:32:05'),
-(73, 45, 'Ikan Dori', 'Id38', 'ikan', '<div>-ikan dori fillet segar</div><div>-sehat dan bergizi</div><div>-dikemas per kilo isi 3-4 fillet ikan</div>', 52000, '1597941247-ikan-dori.JPG', '2020-08-20 09:34:07', '2020-08-20 09:34:07'),
-(74, 47, 'Yukitea', 'MY29', 'minum', 'Yukitea minuman teh susu dan rasa lainnya', 15000, '1597941422-yukitea.JPG', '2020-08-20 09:37:03', '2020-08-20 09:37:03'),
-(75, 47, 'Jack Daniels', 'JD', 'bagus', 'minuman beralkohol-minumal keras', 750000, '1597941516-jack-daniels.JPG', '2020-08-20 09:38:36', '2020-08-20 09:38:52'),
-(76, 47, 'Saleger Drink', 'SD125', 'Minuman', '<div>Saleger herbal drink</div><div>minuman kesehatan/minuman segar/obat/kamu</div>', 125000, '1597941634-saleger-drink.JPG', '2020-08-20 09:40:35', '2020-08-20 09:40:47');
+(71, 46, 'Ikan Asin Daging', 'AS12', 'Ikan', 'Ikan Asin Daging Tenggiri ikan asin daging tenggiri/tenggiri kualitas asli nomor 1.', 15000, '1597941061-ikan-asin-daging.JPG', '2020-08-20 09:31:01', '2020-08-20 09:31:01'),
+(72, 46, 'Bliss Salmon', 'BS89', 'Salmon', 'Bliss kitchen trim salmon fish norway and trout tetelan daging ikan salmon. Daging salmon fresh memiliki banyak kandungan nutrisi dapat dikonsumsi oleh semua kalangan.', 13500, '1597941124-bliss-salmon.JPG', '2020-08-20 09:32:05', '2020-08-20 09:32:05'),
+(73, 45, 'Ikan Dori', 'Id38', 'ikan', 'Ikan dori fillet segar, sehat dan bergizi. Produk ini dikemas per kilo isi 3-4 fillet ikan.', 52000, '1597941247-ikan-dori.JPG', '2020-08-20 09:34:07', '2020-08-20 09:34:07'),
+(74, 47, 'Yukitea', 'MY29', 'minum', 'Yukitea minuman teh susu dan rasa lainnya.', 15000, '1597941422-yukitea.JPG', '2020-08-20 09:37:03', '2020-08-20 09:37:03'),
+(75, 47, 'Jack Daniels', 'JD', 'bagus', 'Minuman beralkohol-minumal keras.', 750000, '1597941516-jack-daniels.JPG', '2020-08-20 09:38:36', '2020-08-20 09:38:52'),
+(76, 47, 'Saleger Drink', 'SD125', 'Minuman', 'Saleger herbal drink minuman kesehatan/minuman segar/obat/kamu.', 125000, '1597941634-saleger-drink.JPG', '2020-08-20 09:40:35', '2020-08-20 09:40:47');
 
 -- --------------------------------------------------------
 
@@ -479,9 +473,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `admin`, `remember_token`, `created_at`, `updated_at`, `address`, `city`, `province`, `country`, `postal_code`, `toko`, `mobile`, `nomor_hp`, `Alamat_usaha`, `Deskripsi_usaha`) VALUES
-(2, 'Maria Anastasya Manullang', 'mariaanastasyamanullang@gmail.com', NULL, '$2y$10$0LUcVaEN8gdbnbw0u2Na2uOwc4KEK0wlkMlahLnZi7XRi29696Gqy', NULL, 'ZSMcflpyILjGG2KFGgiMsKRHVRHYGaCDyBM1OQUgHbIdUjuW07tdCNVUWkJS', '2020-08-09 20:03:18', '2020-08-09 20:03:18', 'Medan', 'Brayan', 'Sumatera Utara', 'Indonesia', '001', NULL, '089992728', NULL, NULL, NULL),
-(1, 'Kios Kita Semua', 'kioskitasemua.kiostas@gmail.com', NULL, '$2y$10$S22S6UuHCESeuf8YBqJdYucPFGM3bFPaJlYfUAldbUnhJB7ZbkNAu', 1, '2nh0Id0NXnEUPGKtKdfuiZTa8o3aTuB8emIesyETsikU41gEyHsaa7o6x46g', '2020-08-09 20:01:42', '2020-08-09 20:01:42', 'Medan', 'Brayan', '0', 'Indonesia', '001', 'Ulos Batak', '89992728', '087715150148', 'Jl. Balige', 'Menjual berbagai macam ulos'),
-(9, 'Jessycha', 'jessycha@gmail.com', NULL, '$2y$10$SPEmAfHYQkJr/7bVtH5KTezSX2QU9UvafWz.H.3sGZpXWWQke4P5K', NULL, 'twQlfaNaUXeXgejUzx6IQb2nO4Mfld3ftslmstR2amHDkzY82vUPRoorjx5N', '2020-08-20 20:55:09', '2020-08-20 20:55:09', 'Medan', 'Balige', 'Sumatera Utara', 'Indonesia', '2088', NULL, '082217178689', NULL, NULL, NULL);
+(2, 'Maria Anastasya Manullang', 'mariaanastasyamanullang@gmail.com', NULL, '$2y$10$0LUcVaEN8gdbnbw0u2Na2uOwc4KEK0wlkMlahLnZi7XRi29696Gqy', NULL, 'jLfEfpMX4B4nnLsYLSQ3qB4BZafxofmNo7icEmrLATcUPifqanWdIUoI1BIV', '2020-08-09 20:03:18', '2020-08-09 20:03:18', 'Medan', 'Brayan', 'Sumatera Utara', 'Indonesia', '001', NULL, '089992728', NULL, NULL, NULL),
+(1, 'Kios Kita Semua', 'kioskitasemua.kiostas@gmail.com', NULL, '$2y$10$S22S6UuHCESeuf8YBqJdYucPFGM3bFPaJlYfUAldbUnhJB7ZbkNAu', 1, 'Z7cCVwHT2VigndAj86db3xr0HUOzlWYKTdxUcDPC1k6YKaWHJXQHhy18jVme', '2020-08-09 20:01:42', '2020-08-09 20:01:42', 'Medan', 'Brayan', '0', 'Indonesia', '001', 'Ulos Batak', '89992728', '087715150148', 'Jl. Balige', 'Menjual berbagai macam ulos'),
+(9, 'Jessycha', 'jessycha@gmail.com', NULL, '$2y$10$SPEmAfHYQkJr/7bVtH5KTezSX2QU9UvafWz.H.3sGZpXWWQke4P5K', NULL, 'twQlfaNaUXeXgejUzx6IQb2nO4Mfld3ftslmstR2amHDkzY82vUPRoorjx5N', '2020-08-20 20:55:09', '2020-08-20 20:55:09', 'Medan', 'Balige', 'Sumatera Utara', 'Indonesia', '2088', NULL, '082217178689', NULL, NULL, NULL),
+(11, 'Aldo Yuda', 'aldo@gmail.com', NULL, '$2y$10$BOIN45hXyqzNU9y7B6YsOuoX/fVjY9dmUd/B6gpPa07GfOp/Qww1y', NULL, NULL, '2020-08-24 23:48:52', '2020-08-24 23:48:52', 'Jl. Thamrin', 'Medan', 'Sumatera Utara', 'Indonesia', '2020', NULL, '083215154255', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -525,12 +520,6 @@ ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -569,7 +558,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -599,7 +588,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -629,7 +618,7 @@ ALTER TABLE `tblgallery`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
