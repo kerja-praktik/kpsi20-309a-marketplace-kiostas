@@ -104,7 +104,7 @@ class CategoryController extends Controller
             $input_data['status']=0;
         }
         $update_categories->update($input_data);
-        return redirect()->route('category.index')->with('message','Updated Success!');
+        return redirect()->route('category.index')->with('message','Berhasil Diupdate!');
     }
 
     /**
