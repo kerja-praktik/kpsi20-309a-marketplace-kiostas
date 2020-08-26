@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','checkOut Page')
+@section('title','Checkout')
 @section('slider')
 @endsection
 @section('content')
@@ -42,11 +42,11 @@
                             </select>
                         </div>
                         <div class="form-group {{$errors->has('billing_postal_code')?'has-error':''}}">
-                            <input type="text" class="form-control" name="billing_postal_code" value="{{$user_login->postal_code}}" id="billing_postal_code" placeholder=" Billing postal code">
+                            <input type="text" class="form-control" name="billing_postal_code" value="{{$user_login->postal_code}}" id="billing_postal_code" placeholder=" Kode Pos Pengirim">
                             <span class="text-danger">{{$errors->first('billing_postal_code')}}</span>
                         </div>
                         <div class="form-group {{$errors->has('billing_mobile')?'has-error':''}}">
-                            <input type="text" class="form-control" name="billing_mobile" value="{{$user_login->mobile}}" id="billing_mobile" placeholder="Nomor Handphone Pengirim">
+                            <input type="text" class="form-control" name="billing_mobile" value="{{$user_login->mobile}}" id="billing_mobile" placeholder="Nomor Telepon Pengirim">
                             <span class="text-danger">{{$errors->first('billing_mobile')}}</span>
                         </div>
                     </div><!--/login form-->
@@ -84,7 +84,7 @@
                             </select>
                         </div>
                         <div class="form-group {{$errors->has('shipping_postal_code')?'has-error':''}}">
-                            <input type="text" class="form-control" name="shipping_postal_code" value="{{$user_login->postal_code}}" id="shipping_postal_code" placeholder="Shipping postal code">
+                            <input type="text" class="form-control" name="shipping_postal_code" value="{{$user_login->postal_code}}" id="shipping_postal_code" placeholder="Kode Pos Penerima">
                             <span class="text-danger">{{$errors->first('shipping_postal_code')}}</span>
                         </div>
                         <div class="form-group {{$errors->has('shipping_mobile')?'has-error':''}}">
