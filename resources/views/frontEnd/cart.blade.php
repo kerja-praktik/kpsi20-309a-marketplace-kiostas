@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','KIOSTAS')
+@section('title','Keranjang')
 @section('slider')
 @endsection
 @section('content')
@@ -17,8 +17,8 @@
                         <td class="image" width="180px">Item</td>
                         <td class="description">Deskripsi</td>
                         <td class="price">Harga</td>
-                        <td class="quantity">Kuantiatas</td>
-                        <td class="total">Total</td>
+                        <td class="quantity">Kuantitas</td>
+                        <td class="total" width="180px">Total</td>
                         <td></td>
                     </tr>
                     </thead>
