@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','Review Order Page')
+@section('title','COD')
 
 @section('content')
     <div class="container">
@@ -10,5 +10,5 @@
             <p class="text-center">Silahkan lihat <a href = "/bantuan">Bantuan </a> untuk informasi lebih lanjut</p>
         </div>
     </div>
-    <div style="margin-bottom: 20px;"></div>
+    <div style="margin-bottom: 400px;"></div>
 @endsection
