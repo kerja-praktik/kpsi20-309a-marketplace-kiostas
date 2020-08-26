@@ -1,9 +1,9 @@
 @extends('frontEnd.layouts.master')
-@section('title','Review Order Page')
+@section('title','Bank Transfer')
 
 @section('content')
     <div class="container">
-        <div id ="demoFontCOD">
+        <div id ="demoFontBankTransfer">
         <h3 class="text-center">PESANAN ANDA SEDANG KAMI PROSES</h3>
             <p class="text-center">Terima Kasih Telah Memesan Dengan Metode Pembayaran Transfer Bank</p>
             <p class="text-center">Kami akan menghubungi email anda (<b>{{$user_order->users_email}}</b>) atau nomor telepon anda (<b>{{$user_order->mobile}}</b>)</p>
