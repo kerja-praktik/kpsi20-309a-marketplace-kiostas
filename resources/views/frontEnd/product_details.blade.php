@@ -1,5 +1,5 @@
 @extends('frontEnd.layouts.master')
-@section('title','Daftar Produk')
+@section('title','Detail Produk')
 @section('slider')
 @endsection
 @section('content')
@@ -57,12 +57,7 @@
                         <span id="dynamicPriceInput">Rp {{number_format($detail_product->price, 0, ".", ".")}}</span>
                             <label>Kuantitas:</label>
                             <input type="text" name="quantity" value="{{$totalStock}}" id="inputStock"/>
-                            @if($totalStock>0)
-                            <button type="submit" class="btn btn-default cart" id="buttonAddToCart">
-                                <i class="fa fa-shopping-cart"></i>
-                                Tambahkan ke keranjang
-                            </button>
-                            @endif
+                          
                         </span>
                         <p><b>Ketersediaan:</b>
                             @if($totalStock>0)
@@ -70,6 +65,12 @@
                             @else
                                 <span id="availableStockInput">Habis</span>
                             @endif
+                             @if($totalStock>0)
+                            <button type="submit" class="btn btn-default cart" id="buttonAddToCart">
+                                <i class="fa fa-shopping-cart"></i>
+                                Tambahkan ke keranjang
+                            @endif
+                             </button>
                         </p>
                        
                     </div>
