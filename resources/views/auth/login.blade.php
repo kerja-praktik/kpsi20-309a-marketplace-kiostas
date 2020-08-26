@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title><meta charset="UTF-8" />
+    <title>Login</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" />
     <link rel="stylesheet" href="{{asset('css/bootstrap-responsive.min.css')}}" />
@@ -22,7 +23,7 @@
                     <input id="email" type="email" placeholder="Email Admin" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                     @if ($errors->has('email'))
                         <br><span class="invalid-feedback" style="color: white;">
-                            <strong>{{ $errors->first('email') }}</strong>
+                            <b>{{ $errors->first('email') }}</b>
                         </span>
                     @endif
                 </div>
@@ -35,7 +36,7 @@
                     <input id="password" type="password"placeholder="Kata Sandi" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                     @if ($errors->has('password'))
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('password') }}</strong>
+                            <b>{{ $errors->first('password') }}</b>
                         </span>
                     @endif
                 </div>
