@@ -83,36 +83,12 @@
             <div class="col-sm-12">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#details" data-toggle="tab">Deskripsi</a></li>
-                    <li><a href="#reviews" data-toggle="tab">Review </a></li>
                 </ul>
             </div>
             <div class="tab-content">
                 <div class="tab-pane fade active in" id="details" >
                     {{$detail_product->description}}
                 </div>
-
-                <div class="tab-pane fade" id="reviews" >
-                    <div class="col-sm-12">
-                        <ul>
-                            <li><a href=""><i class="fa fa-user"></i>Medan</a></li>
-                            <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-                            <li><a href=""><i class="fa fa-calendar-o"></i>15 Juli 2020</a></li>
-                        </ul>
-
-                        <form action="#">
-										<span>
-											<input type="text" placeholder="Your Name"/>
-											<input type="email" placeholder="Email Address"/>
-										</span>
-                            <textarea name="" ></textarea>
-                            <b>Rating: </b> <img src="{{asset('frontEnd/images/product-details/rating.png')}}" alt="" />
-                            <button type="button" class="btn btn-default pull-right">
-                                Submit
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
             </div>
         </div><!--/category-tab-->
 
