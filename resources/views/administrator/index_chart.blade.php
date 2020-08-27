@@ -93,7 +93,7 @@ yAxis: {
 
 xAxis: {
     accessibility: {
-        rangeDescription: 'Range: 2010 to 2017'
+        rangeDescription: 'Range: Januari to Desember'
     }
 },
 
