@@ -154,16 +154,16 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2014_10_12_000000_create_users_table', 2),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(8, '2018_10_20_040609_create_categories_table', 3),
-(9, '2018_10_24_075802_create_products_table', 4),
-(10, '2018_11_08_024109_create_product_att_table', 5),
-(11, '2018_11_20_055123_create_tblgallery_table', 6),
-(12, '2018_11_26_070031_create_cart_table', 7),
-(13, '2018_11_28_072535_create_coupons_table', 8),
-(15, '2018_12_01_042342_create_countries_table', 10),
-(19, '2018_12_03_043804_add_more_fields_to_users_table', 14),
-(17, '2018_12_03_093548_create_delivery_address_table', 12),
-(18, '2018_12_05_024718_create_orders_table', 13);
+(8, '2020_08_27_073428_create_categories_table', 3),
+(9, '2020_08_27_073655_create_products_table', 4),
+(10, '2020_08_27_073732_create_product_att_table', 5),
+(11, '2020_08_27_073855_create_tblgallery_table', 6),
+(12, '2020_08_27_073803_create_cart_table', 7),
+(15, '2020_08_27_073929_create_countries_table', 10),
+(19, '2020_08_27_080023_add_more_fields_to_users_table', 14),
+(17, '2020_08_27_074105_create_delivery_address_table', 12),
+(18, '2020_08_27_074136_create_orders_table', 13);
+(20, '2020_08_28_011459_create_provinces_table', 15);
 
 -- --------------------------------------------------------
 
