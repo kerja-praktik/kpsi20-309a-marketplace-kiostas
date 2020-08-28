@@ -93,7 +93,7 @@ return [
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',
-    'required'             => 'The :attribute field is required.',
+    'required'             => ' :attribute harus diisi.',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
     'required_with'        => 'The :attribute field is required when :values is present.',
@@ -141,6 +141,24 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => 'Nama',
+        'email' =>'Email',
+         'password' => 'Kata sandi',
+         'billing_name' => 'Nama pengirim',
+         'billing_address' => 'Alamat pengirim',
+         'billing_city' => 'Kota Pengirim',
+         'billing_postal_code' => 'Kode POS pengirim',
+         'billing_mobile' => 'Nomor telepon pengirim',
+         'shipping_name' => 'Nama penerima',
+         'shipping_address' => 'Alamat penerima',
+         'shipping_city' => 'Kota penerima',
+         'shipping_postal_code' => 'Kode POS penerima',
+         'shipping_mobile' => 'Nomor telepon penerima',
+         'address' => 'Alamat',
+         'city' => 'Kota',
+         'province' => 'Provinsi',
+         'mobile' => 'Nomor telepon',
+    ],
 
 ];
